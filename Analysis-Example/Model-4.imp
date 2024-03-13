@@ -1,0 +1,70 @@
+#---------------------------------------------------#
+# A General Approach to Modeling Latent Variable
+#  Interactions and Nonlinear Effects
+#
+# Supplemental Material
+#
+# Model 4 - Latent with Binary Moderator
+#
+# Copyright Brian T. Keller 2024 all rights reserved
+#---------------------------------------------------#
+
+# Data set's file name
+DATA: data_cat.txt;
+
+# Variable names in text data set
+VARIABLES:
+    consci1:consci10 emosta1:emosta10
+    orgcon1:orgcon10 cwb1:cwb23
+    bin_org cat_org;
+
+## Specify that the items are ordinal.
+ORDINAL:
+    consci1:consci10 orgcon1:orgcon10
+    cwb1:cwb23;
+
+## Specify binary orgcon.
+ORDINAL: bin_org;
+
+## Define latent variables
+LATENT: consci cwb;
+
+## Begin Modeling Syntax
+MODEL:
+    ## Latent Moderation Model
+    cwb_model:
+        # Explicitly write out the product between
+	    # the two latent variables
+        cwb ~ consci bin_org consci*bin_org;
+
+        # Fix residual variance to 1 for identification
+		cwb ~~ cwb@1;
+
+    ## Correlating predictor latent variables
+    predictor_model:
+	    bin_org ~ 1;
+        consci ~ bin_org;
+        consci ~~ consci@1;
+
+    ## Measurement Models for conscientiousness items
+    measurement_consci:
+    	consci -> consci1@l_con consci2:consci10;
+
+    ## Measurement Models for CWB items
+    measurement_cwb:
+    	cwb -> cwb1@l_cwb cwb2:cwb23;
+
+# Specify first loading as always positive
+PARAMETERS:
+	l_con ~ truncate(0, Inf);
+	l_cwb ~ truncate(0, Inf);
+
+## Conditional Effects Analysis with bin_org
+SIMPLE:
+    consci | bin_org;
+ 
+# Algorithmic Options
+SEED: 138912;   # PRNG Seed
+CHAINS: 10;     # Number of chains
+BURN: 20000;    # Burn-in iterations
+ITER: 50000;    # Post burn-in iterations

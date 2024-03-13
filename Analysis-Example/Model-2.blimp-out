@@ -1,0 +1,2637 @@
+
+---------------------------------------------------------------------------
+
+                                   Blimp
+                                   3.2.9
+
+             Blimp was developed with funding from Institute of
+           Education Sciences awards R305D150056 and R305D190002.
+
+            Craig K. Enders, P.I. Email: cenders@psych.ucla.edu
+           Brian T. Keller, Co-P.I. Email: btkeller@missouri.edu
+                 Han Du, Co-P.I. Email: hdu@psych.ucla.edu
+                 Roy Levy, Co-P.I. Email: roy.levy@asu.edu
+
+              Programming and Blimp Studio by Brian T. Keller
+
+                   There is no expressed license given.
+
+---------------------------------------------------------------------------
+
+
+ALGORITHMIC OPTIONS SPECIFIED:
+
+  Imputation method:                 Fully Bayesian model-based
+  MCMC algorithm:                    Full conditional Metropolis sampler with
+                                       Auto-Derived Conditional Distributions
+  Between-cluster imputation model:  Not applicable, single-level imputation
+  Prior for random effect variances: Not applicable, single-level imputation
+  Prior for residual variances:      Zero sum of squares, df = -2 (PRIOR2)
+  Prior for predictor variances:     Unit sum of squares, df = 2 (XPRIOR1)
+  Chain Starting Values:             Random starting values
+
+
+  NOTE: The default prior for regression coefficients 
+        in categorical models is 'normal( 0.0, 5.0)'
+
+
+BURN-IN POTENTIAL SCALE REDUCTION (PSR) OUTPUT:
+
+  NOTE: Split chain PSR is being used. This splits each chain's
+        iterations to create twice as many chains.
+
+  Comparing iterations across 10 chains    Highest PSR   Parameter #  
+                          501 to 1000            1.318            23  
+                         1001 to 2000            1.198            64  
+                         1501 to 3000            1.134           114  
+                         2001 to 4000            1.082           114  
+                         2501 to 5000            1.058            73  
+                         3001 to 6000            1.053            23  
+                         3501 to 7000            1.046           144  
+                         4001 to 8000            1.040            44  
+                         4501 to 9000            1.037            24  
+                         5001 to 10000           1.029           103  
+                         5501 to 11000           1.028           153  
+                         6001 to 12000           1.028            44  
+                         6501 to 13000           1.021            64  
+                         7001 to 14000           1.021            63  
+                         7501 to 15000           1.017            33  
+                         8001 to 16000           1.018            33  
+                         8501 to 17000           1.020            64  
+                         9001 to 18000           1.016            94  
+                         9501 to 19000           1.016           134  
+                        10001 to 20000           1.014           134  
+
+
+METROPOLIS-HASTINGS ACCEPTANCE RATES:
+
+  Chain 1:
+
+    Variable                            Type    Probability   Target Value 
+    consci1                        threshold          0.385          0.350 
+    consci2                        threshold          0.321          0.350 
+    consci3                        threshold          0.342          0.350 
+    consci4                        threshold          0.323          0.350 
+    consci5                        threshold          0.340          0.350 
+    consci6                        threshold          0.344          0.350 
+    consci7                        threshold          0.347          0.350 
+    consci8                        threshold          0.353          0.350 
+    consci9                        threshold          0.392          0.350 
+    consci10                       threshold          0.332          0.350 
+    orgcon1                        threshold          0.337          0.350 
+    orgcon2                        threshold          0.317          0.350 
+    orgcon3                        threshold          0.348          0.350 
+    orgcon4                        threshold          0.420          0.350 
+    orgcon5                        threshold          0.340          0.350 
+    orgcon6                        threshold          0.342          0.350 
+    orgcon7                        threshold          0.394          0.350 
+    orgcon8                        threshold          0.309          0.350 
+    orgcon9                        threshold          0.382          0.350 
+    orgcon10                       threshold          0.353          0.350 
+    cwb1                           threshold          0.325          0.350 
+    cwb2                           threshold          0.345          0.350 
+    cwb3                           threshold          0.395          0.350 
+    cwb4                           threshold          0.380          0.350 
+    cwb5                           threshold          0.340          0.350 
+    cwb6                           threshold          0.316          0.350 
+    cwb7                           threshold          0.351          0.350 
+    cwb8                           threshold          0.350          0.350 
+    cwb9                           threshold          0.380          0.350 
+    cwb10                          threshold          0.363          0.350 
+    cwb11                          threshold          0.327          0.350 
+    cwb12                          threshold          0.385          0.350 
+    cwb13                          threshold          0.345          0.350 
+    cwb14                          threshold          0.438          0.350 
+    cwb15                          threshold          0.402          0.350 
+    cwb16                          threshold          0.371          0.350 
+    cwb17                          threshold          0.361          0.350 
+    cwb18                          threshold          0.373          0.350 
+    cwb19                          threshold          0.357          0.350 
+    cwb20                          threshold          0.303          0.350 
+    cwb21                          threshold          0.367          0.350 
+    cwb22                          threshold          0.366          0.350 
+    cwb23                          threshold          0.349          0.350 
+
+  NOTE: Suppressing printing of 9 chains.
+        Use keyword 'tuneinfo' in options to override.
+
+
+DATA INFORMATION:
+
+  Sample Size:              1000
+  Missing Data Rates:
+
+                  consci1 = 00.00
+                  consci2 = 00.00
+                  consci3 = 00.00
+                  consci4 = 00.00
+                  consci5 = 00.00
+                  consci6 = 00.00
+                  consci7 = 00.00
+                  consci8 = 00.00
+                  consci9 = 00.00
+                 consci10 = 00.00
+                  orgcon1 = 00.00
+                  orgcon2 = 00.00
+                  orgcon3 = 00.00
+                  orgcon4 = 00.00
+                  orgcon5 = 00.00
+                  orgcon6 = 00.00
+                  orgcon7 = 00.00
+                  orgcon8 = 00.00
+                  orgcon9 = 00.00
+                 orgcon10 = 00.00
+                     cwb1 = 00.00
+                     cwb2 = 00.00
+                     cwb3 = 00.00
+                     cwb4 = 00.00
+                     cwb5 = 00.00
+                     cwb6 = 00.00
+                     cwb7 = 00.00
+                     cwb8 = 00.00
+                     cwb9 = 00.00
+                    cwb10 = 00.00
+                    cwb11 = 00.00
+                    cwb12 = 00.00
+                    cwb13 = 00.00
+                    cwb14 = 00.00
+                    cwb15 = 00.00
+                    cwb16 = 00.00
+                    cwb17 = 00.00
+                    cwb18 = 00.00
+                    cwb19 = 00.00
+                    cwb20 = 00.00
+                    cwb21 = 00.00
+                    cwb22 = 00.00
+                    cwb23 = 00.00
+
+
+
+MODEL INFORMATION:
+
+  NUMBER OF PARAMETERS
+    Outcome Models:         219
+    Predictor Models:       0
+
+  FACTORS
+    Level-1:                consci orgcon cwb
+
+  MODELS
+
+   cwb_model:
+    [1]  cwb ~ consci orgcon consci*orgcon
+
+   predictor_model:
+    [2]  consci ~ Intercept@0
+    [3]  orgcon ~ Intercept@0
+    [4]  consci orgcon <-> consci orgcon 
+
+   measurement_consci:
+    [5]  consci1 ~ Intercept consci@l_con
+    [6]  consci2 ~ Intercept consci
+    [7]  consci3 ~ Intercept consci
+    [8]  consci4 ~ Intercept consci
+    [9]  consci5 ~ Intercept consci
+   [10]  consci6 ~ Intercept consci
+   [11]  consci7 ~ Intercept consci
+   [12]  consci8 ~ Intercept consci
+   [13]  consci9 ~ Intercept consci
+   [14]  consci10 ~ Intercept consci
+
+   measurement_org:
+   [15]  orgcon1 ~ Intercept orgcon@l_org
+   [16]  orgcon2 ~ Intercept orgcon
+   [17]  orgcon3 ~ Intercept orgcon
+   [18]  orgcon4 ~ Intercept orgcon
+   [19]  orgcon5 ~ Intercept orgcon
+   [20]  orgcon6 ~ Intercept orgcon
+   [21]  orgcon7 ~ Intercept orgcon
+   [22]  orgcon8 ~ Intercept orgcon
+   [23]  orgcon9 ~ Intercept orgcon
+   [24]  orgcon10 ~ Intercept orgcon
+
+   measurement_cwb:
+   [25]  cwb1 ~ Intercept cwb@l_cwb
+   [26]  cwb2 ~ Intercept cwb
+   [27]  cwb3 ~ Intercept cwb
+   [28]  cwb4 ~ Intercept cwb
+   [29]  cwb5 ~ Intercept cwb
+   [30]  cwb6 ~ Intercept cwb
+   [31]  cwb7 ~ Intercept cwb
+   [32]  cwb8 ~ Intercept cwb
+   [33]  cwb9 ~ Intercept cwb
+   [34]  cwb10 ~ Intercept cwb
+   [35]  cwb11 ~ Intercept cwb
+   [36]  cwb12 ~ Intercept cwb
+   [37]  cwb13 ~ Intercept cwb
+   [38]  cwb14 ~ Intercept cwb
+   [39]  cwb15 ~ Intercept cwb
+   [40]  cwb16 ~ Intercept cwb
+   [41]  cwb17 ~ Intercept cwb
+   [42]  cwb18 ~ Intercept cwb
+   [43]  cwb19 ~ Intercept cwb
+   [44]  cwb20 ~ Intercept cwb
+   [45]  cwb21 ~ Intercept cwb
+   [46]  cwb22 ~ Intercept cwb
+   [47]  cwb23 ~ Intercept cwb
+
+  PRIORS SPECIFIED
+    [1]  l_con ~ truncate(0, inf)
+    [2]  l_org ~ truncate(0, inf)
+    [3]  l_cwb ~ truncate(0, inf)
+
+
+WARNING MESSAGES:
+
+  WARNING: The focal predictor "consci" is not centered.
+           Simple intercepts in the conditional effects table are
+           evaluated at a score of zero on the focal predictor.
+  
+  WARNING: The focal predictor "consci" is not centered.
+           Simple intercepts in the conditional effects table are
+           evaluated at a score of zero on the focal predictor.
+  
+  WARNING: The focal predictor "consci" is not centered.
+           Simple intercepts in the conditional effects table are
+           evaluated at a score of zero on the focal predictor.
+  
+
+
+MODEL FIT:
+
+
+  INFORMATION CRITERIA
+
+    Marginal Likelihood
+      DIC2                  139946.016
+      WAIC                  150240.147
+
+    Conditional Likelihood
+      DIC2                  139946.016
+      WAIC                  150240.147
+
+
+CORRELATIONS AMONG RESIDUALS:
+
+  Summaries based on 50000 iterations using 10 chains.
+
+
+Correlations                         Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+
+  cwb, consci                        -0.000      0.046     -0.089      0.088      1.000  49430.157 
+  cwb, orgcon                         0.000      0.046     -0.089      0.090      1.000  49387.615 
+  cwb, consci1                       -0.001      0.040     -0.079      0.077      1.001  27160.234 
+  cwb, consci2                        0.033      0.039     -0.044      0.110      1.000  28911.419 
+  cwb, consci3                        0.002      0.039     -0.074      0.079      1.000  28158.579 
+  cwb, consci4                        0.026      0.039     -0.051      0.102      1.001  27531.084 
+  cwb, consci5                        0.023      0.039     -0.054      0.099      1.000  28241.010 
+  cwb, consci6                       -0.007      0.039     -0.083      0.070      1.000  27724.635 
+  cwb, consci7                       -0.071      0.039     -0.147      0.005      1.000  27857.695 
+  cwb, consci8                        0.016      0.039     -0.061      0.093      1.000  27588.963 
+  cwb, consci9                       -0.003      0.039     -0.080      0.074      1.000  27259.595 
+  cwb, consci10                      -0.029      0.038     -0.104      0.047      1.000  29271.855 
+  cwb, orgcon1                        0.032      0.039     -0.043      0.108      1.000  25542.383 
+  cwb, orgcon2                        0.017      0.039     -0.058      0.093      1.001  24754.302 
+  cwb, orgcon3                       -0.061      0.038     -0.135      0.015      1.001  27940.309 
+  cwb, orgcon4                        0.045      0.039     -0.032      0.119      1.001  25073.373 
+  cwb, orgcon5                       -0.019      0.038     -0.094      0.055      1.000  27752.155 
+  cwb, orgcon6                       -0.032      0.038     -0.108      0.043      1.000  23410.716 
+  cwb, orgcon7                       -0.012      0.038     -0.087      0.063      1.000  28504.148 
+  cwb, orgcon8                       -0.020      0.038     -0.095      0.054      1.001  28176.130 
+  cwb, orgcon9                        0.056      0.038     -0.020      0.130      1.000  24282.804 
+  cwb, orgcon10                       0.012      0.038     -0.064      0.086      1.000  28535.302 
+  cwb, cwb1                           0.011      0.044     -0.075      0.096      1.000  39691.499 
+  cwb, cwb2                           0.011      0.044     -0.074      0.096      1.000  41086.032 
+  cwb, cwb3                           0.016      0.044     -0.070      0.102      1.000  43205.598 
+  cwb, cwb4                           0.006      0.044     -0.080      0.092      1.000  44147.948 
+  cwb, cwb5                          -0.006      0.044     -0.091      0.080      1.000  41793.707 
+  cwb, cwb6                          -0.027      0.043     -0.112      0.059      1.000  40801.694 
+  cwb, cwb7                           0.016      0.043     -0.069      0.101      1.000  39862.304 
+  cwb, cwb8                          -0.002      0.043     -0.087      0.084      1.000  43521.905 
+  cwb, cwb9                          -0.000      0.044     -0.086      0.085      1.000  43621.788 
+  cwb, cwb10                         -0.001      0.043     -0.086      0.085      1.000  44013.476 
+  cwb, cwb11                         -0.002      0.044     -0.088      0.083      1.000  43037.983 
+  cwb, cwb12                          0.014      0.043     -0.072      0.098      1.000  42987.871 
+  cwb, cwb13                          0.011      0.044     -0.075      0.097      1.000  39567.599 
+  cwb, cwb14                         -0.002      0.044     -0.087      0.083      1.000  42189.149 
+  cwb, cwb15                         -0.015      0.044     -0.100      0.071      1.000  42718.946 
+  cwb, cwb16                          0.001      0.044     -0.085      0.087      1.000  39914.751 
+  cwb, cwb17                         -0.030      0.044     -0.115      0.057      1.000  42137.776 
+  cwb, cwb18                          0.003      0.044     -0.082      0.089      1.000  44182.738 
+  cwb, cwb19                         -0.025      0.043     -0.109      0.061      1.000  43434.949 
+  cwb, cwb20                          0.005      0.043     -0.080      0.090      1.000  41333.685 
+  cwb, cwb21                         -0.016      0.043     -0.101      0.070      1.000  44567.953 
+  cwb, cwb22                          0.016      0.043     -0.068      0.101      1.000  42760.816 
+  cwb, cwb23                          0.006      0.044     -0.080      0.091      1.000  43576.275 
+  consci, consci1                     0.000      0.046     -0.089      0.090      1.000  49736.529 
+  consci, consci2                    -0.000      0.046     -0.090      0.090      1.000  49949.656 
+  consci, consci3                     0.000      0.046     -0.090      0.089      1.000  49075.429 
+  consci, consci4                     0.000      0.046     -0.089      0.091      1.000  49936.401 
+  consci, consci5                     0.000      0.046     -0.089      0.089      1.000  48393.810 
+  consci, consci6                     0.000      0.046     -0.088      0.090      1.000  47967.865 
+  consci, consci7                    -0.000      0.046     -0.090      0.090      1.000  47431.769 
+  consci, consci8                     0.000      0.046     -0.090      0.090      1.000  50957.146 
+  consci, consci9                     0.000      0.046     -0.090      0.090      1.000  48617.747 
+  consci, consci10                    0.000      0.046     -0.089      0.090      1.000  49945.467 
+  consci, orgcon1                     0.037      0.038     -0.038      0.111      1.000  31852.366 
+  consci, orgcon2                    -0.006      0.038     -0.081      0.070      1.000  31155.734 
+  consci, orgcon3                     0.040      0.038     -0.035      0.115      1.000  29757.248 
+  consci, orgcon4                    -0.013      0.038     -0.088      0.063      1.000  31163.583 
+  consci, orgcon5                    -0.040      0.038     -0.115      0.036      1.000  33175.227 
+  consci, orgcon6                     0.034      0.038     -0.041      0.109      1.000  33265.443 
+  consci, orgcon7                     0.002      0.038     -0.073      0.077      1.001  29959.834 
+  consci, orgcon8                    -0.021      0.038     -0.095      0.055      1.000  31543.112 
+  consci, orgcon9                    -0.014      0.038     -0.089      0.061      1.000  34693.024 
+  consci, orgcon10                   -0.024      0.038     -0.099      0.052      1.000  34313.967 
+  consci, cwb1                       -0.007      0.040     -0.086      0.071      1.000  26968.678 
+  consci, cwb2                       -0.001      0.040     -0.080      0.078      1.000  27599.719 
+  consci, cwb3                        0.011      0.040     -0.068      0.090      1.000  28109.632 
+  consci, cwb4                        0.018      0.040     -0.062      0.097      1.000  27712.915 
+  consci, cwb5                        0.014      0.040     -0.066      0.093      1.000  27393.126 
+  consci, cwb6                       -0.014      0.040     -0.094      0.065      1.000  28142.556 
+  consci, cwb7                        0.036      0.040     -0.043      0.114      1.000  27797.901 
+  consci, cwb8                        0.003      0.040     -0.075      0.081      1.000  29616.560 
+  consci, cwb9                       -0.010      0.040     -0.089      0.069      1.000  27707.648 
+  consci, cwb10                      -0.003      0.040     -0.082      0.075      1.000  28807.688 
+  consci, cwb11                      -0.003      0.040     -0.082      0.076      1.000  28734.545 
+  consci, cwb12                      -0.044      0.040     -0.122      0.034      1.000  28109.883 
+  consci, cwb13                      -0.032      0.040     -0.112      0.046      1.000  27716.087 
+  consci, cwb14                      -0.019      0.040     -0.097      0.061      1.000  27575.407 
+  consci, cwb15                      -0.027      0.040     -0.105      0.052      1.000  29147.533 
+  consci, cwb16                       0.016      0.040     -0.063      0.094      1.000  27363.131 
+  consci, cwb17                      -0.018      0.040     -0.097      0.061      1.000  26911.465 
+  consci, cwb18                       0.041      0.040     -0.037      0.118      1.000  28095.673 
+  consci, cwb19                      -0.011      0.040     -0.090      0.068      1.000  27900.768 
+  consci, cwb20                       0.020      0.040     -0.060      0.098      1.000  26118.097 
+  consci, cwb21                      -0.001      0.040     -0.080      0.077      1.000  28414.044 
+  consci, cwb22                       0.011      0.040     -0.068      0.089      1.000  28271.296 
+  consci, cwb23                       0.006      0.040     -0.073      0.084      1.000  27767.117 
+  orgcon, consci1                     0.018      0.039     -0.059      0.096      1.000  31646.253 
+  orgcon, consci2                     0.003      0.039     -0.074      0.080      1.001  30317.112 
+  orgcon, consci3                     0.010      0.039     -0.065      0.087      1.000  31204.060 
+  orgcon, consci4                     0.007      0.039     -0.070      0.084      1.000  31273.378 
+  orgcon, consci5                    -0.004      0.039     -0.081      0.072      1.001  30964.906 
+  orgcon, consci6                    -0.013      0.039     -0.090      0.064      1.000  33233.880 
+  orgcon, consci7                     0.010      0.039     -0.067      0.087      1.000  30863.510 
+  orgcon, consci8                    -0.036      0.039     -0.113      0.041      1.000  31615.423 
+  orgcon, consci9                     0.011      0.039     -0.064      0.087      1.000  32623.463 
+  orgcon, consci10                    0.002      0.038     -0.073      0.078      1.000  32668.526 
+  orgcon, orgcon1                    -0.000      0.046     -0.090      0.090      1.000  48569.746 
+  orgcon, orgcon2                     0.000      0.046     -0.090      0.089      1.000  49956.256 
+  orgcon, orgcon3                     0.001      0.046     -0.089      0.091      1.000  47782.186 
+  orgcon, orgcon4                     0.000      0.046     -0.090      0.090      1.000  49220.839 
+  orgcon, orgcon5                     0.000      0.046     -0.090      0.090      1.000  49734.655 
+  orgcon, orgcon6                    -0.000      0.046     -0.090      0.089      1.000  49704.927 
+  orgcon, orgcon7                    -0.000      0.046     -0.090      0.090      1.000  49111.307 
+  orgcon, orgcon8                     0.001      0.046     -0.089      0.090      1.000  50301.149 
+  orgcon, orgcon9                     0.000      0.046     -0.090      0.089      1.000  50332.313 
+  orgcon, orgcon10                   -0.000      0.045     -0.089      0.089      1.000  49421.755 
+  orgcon, cwb1                       -0.002      0.041     -0.083      0.079      1.000  32493.967 
+  orgcon, cwb2                       -0.012      0.041     -0.093      0.069      1.000  35246.406 
+  orgcon, cwb3                       -0.022      0.042     -0.103      0.060      1.000  32599.410 
+  orgcon, cwb4                       -0.010      0.041     -0.091      0.071      1.000  35039.409 
+  orgcon, cwb5                        0.024      0.042     -0.058      0.105      1.000  33084.402 
+  orgcon, cwb6                        0.040      0.041     -0.041      0.122      1.000  33594.059 
+  orgcon, cwb7                       -0.017      0.041     -0.098      0.064      1.000  32918.432 
+  orgcon, cwb8                        0.004      0.041     -0.078      0.084      1.000  32920.084 
+  orgcon, cwb9                       -0.006      0.041     -0.087      0.075      1.000  33440.648 
+  orgcon, cwb10                      -0.000      0.041     -0.081      0.081      1.000  32704.165 
+  orgcon, cwb11                      -0.001      0.042     -0.082      0.081      1.000  31851.292 
+  orgcon, cwb12                      -0.035      0.041     -0.115      0.045      1.000  33524.715 
+  orgcon, cwb13                      -0.030      0.042     -0.111      0.051      1.000  32490.362 
+  orgcon, cwb14                       0.001      0.041     -0.080      0.082      1.000  31634.344 
+  orgcon, cwb15                       0.005      0.042     -0.077      0.086      1.000  30193.408 
+  orgcon, cwb16                       0.009      0.041     -0.072      0.090      1.000  32689.949 
+  orgcon, cwb17                       0.042      0.042     -0.040      0.123      1.000  32296.811 
+  orgcon, cwb18                       0.013      0.041     -0.069      0.094      1.000  33256.820 
+  orgcon, cwb19                       0.022      0.041     -0.058      0.103      1.000  34508.757 
+  orgcon, cwb20                       0.003      0.041     -0.079      0.084      1.000  31789.762 
+  orgcon, cwb21                       0.022      0.041     -0.059      0.103      1.000  31330.606 
+  orgcon, cwb22                      -0.021      0.042     -0.103      0.061      1.000  33288.349 
+  orgcon, cwb23                      -0.004      0.041     -0.085      0.076      1.000  32028.573 
+  consci1, consci2                   -0.036      0.041     -0.116      0.044      1.001  20687.505 
+  consci1, consci3                    0.050      0.040     -0.029      0.129      1.000  23004.503 
+  consci1, consci4                    0.010      0.041     -0.071      0.089      1.001  22314.804 
+  consci1, consci5                    0.029      0.041     -0.051      0.108      1.001  18212.816 
+  consci1, consci6                   -0.022      0.041     -0.102      0.058      1.001  24051.180 
+  consci1, consci7                    0.004      0.041     -0.074      0.084      1.001  22395.585 
+  consci1, consci8                   -0.007      0.041     -0.088      0.073      1.001  18888.021 
+  consci1, consci9                   -0.039      0.040     -0.118      0.041      1.000  20047.077 
+  consci1, consci10                  -0.001      0.040     -0.080      0.078      1.001  22455.477 
+  consci1, orgcon1                   -0.015      0.040     -0.093      0.063      1.000  30359.619 
+  consci1, orgcon2                    0.015      0.040     -0.063      0.093      1.000  31465.788 
+  consci1, orgcon3                    0.024      0.040     -0.054      0.103      1.000  29410.497 
+  consci1, orgcon4                   -0.002      0.040     -0.081      0.076      1.000  30193.710 
+  consci1, orgcon5                    0.008      0.040     -0.070      0.087      1.000  28475.639 
+  consci1, orgcon6                    0.003      0.040     -0.075      0.081      1.000  28992.713 
+  consci1, orgcon7                    0.011      0.040     -0.067      0.090      1.000  30438.403 
+  consci1, orgcon8                   -0.021      0.040     -0.099      0.056      1.000  30036.939 
+  consci1, orgcon9                   -0.029      0.040     -0.107      0.049      1.000  29388.855 
+  consci1, orgcon10                   0.025      0.040     -0.054      0.104      1.000  28291.216 
+  consci1, cwb1                       0.003      0.041     -0.078      0.082      1.000  27829.961 
+  consci1, cwb2                      -0.026      0.041     -0.106      0.054      1.000  28681.590 
+  consci1, cwb3                      -0.003      0.041     -0.085      0.078      1.000  28606.572 
+  consci1, cwb4                      -0.021      0.041     -0.101      0.059      1.000  27188.190 
+  consci1, cwb5                       0.015      0.041     -0.066      0.096      1.001  26311.786 
+  consci1, cwb6                      -0.016      0.041     -0.097      0.065      1.000  27033.916 
+  consci1, cwb7                       0.023      0.041     -0.058      0.104      1.000  25963.822 
+  consci1, cwb8                      -0.030      0.041     -0.110      0.050      1.001  27877.808 
+  consci1, cwb9                      -0.018      0.041     -0.098      0.063      1.000  28073.948 
+  consci1, cwb10                      0.018      0.041     -0.063      0.098      1.000  28006.234 
+  consci1, cwb11                      0.014      0.041     -0.067      0.095      1.000  26742.083 
+  consci1, cwb12                      0.033      0.041     -0.047      0.112      1.000  27623.932 
+  consci1, cwb13                     -0.049      0.041     -0.129      0.031      1.001  26668.266 
+  consci1, cwb14                      0.029      0.041     -0.050      0.110      1.000  27798.698 
+  consci1, cwb15                     -0.005      0.041     -0.085      0.076      1.000  27447.525 
+  consci1, cwb16                      0.031      0.041     -0.048      0.111      1.000  27411.430 
+  consci1, cwb17                      0.012      0.041     -0.069      0.092      1.001  26910.747 
+  consci1, cwb18                     -0.027      0.041     -0.108      0.053      1.001  26079.400 
+  consci1, cwb19                     -0.004      0.041     -0.084      0.077      1.000  26412.835 
+  consci1, cwb20                      0.006      0.041     -0.074      0.086      1.000  27171.955 
+  consci1, cwb21                     -0.011      0.041     -0.091      0.069      1.000  27445.542 
+  consci1, cwb22                     -0.007      0.041     -0.087      0.073      1.000  27219.105 
+  consci1, cwb23                      0.032      0.041     -0.049      0.112      1.000  28179.449 
+  consci2, consci3                    0.012      0.040     -0.068      0.090      1.001  23275.363 
+  consci2, consci4                    0.016      0.040     -0.063      0.095      1.000  24062.726 
+  consci2, consci5                   -0.018      0.040     -0.097      0.061      1.000  24837.683 
+  consci2, consci6                    0.002      0.040     -0.077      0.081      1.000  24702.581 
+  consci2, consci7                   -0.004      0.040     -0.083      0.075      1.000  22514.577 
+  consci2, consci8                    0.005      0.041     -0.074      0.085      1.001  21261.908 
+  consci2, consci9                    0.001      0.040     -0.078      0.080      1.001  19725.766 
+  consci2, consci10                   0.042      0.040     -0.037      0.120      1.000  23107.777 
+  consci2, orgcon1                    0.024      0.040     -0.054      0.101      1.000  31213.553 
+  consci2, orgcon2                   -0.016      0.040     -0.094      0.062      1.000  31655.463 
+  consci2, orgcon3                   -0.002      0.040     -0.080      0.076      1.000  31216.336 
+  consci2, orgcon4                    0.016      0.040     -0.063      0.093      1.000  30348.499 
+  consci2, orgcon5                   -0.008      0.040     -0.087      0.070      1.000  28446.159 
+  consci2, orgcon6                    0.019      0.040     -0.059      0.097      1.000  28937.080 
+  consci2, orgcon7                   -0.009      0.040     -0.087      0.067      1.000  31411.992 
+  consci2, orgcon8                   -0.028      0.040     -0.105      0.050      1.000  30453.129 
+  consci2, orgcon9                    0.019      0.040     -0.059      0.097      1.000  29764.227 
+  consci2, orgcon10                  -0.034      0.040     -0.112      0.043      1.000  29495.630 
+  consci2, cwb1                       0.022      0.041     -0.058      0.102      1.000  27812.114 
+  consci2, cwb2                       0.037      0.041     -0.044      0.116      1.000  27232.184 
+  consci2, cwb3                       0.054      0.041     -0.026      0.134      1.000  26247.148 
+  consci2, cwb4                       0.030      0.041     -0.051      0.110      1.000  26096.232 
+  consci2, cwb5                      -0.014      0.041     -0.094      0.066      1.001  26014.354 
+  consci2, cwb6                       0.005      0.041     -0.074      0.084      1.000  28925.351 
+  consci2, cwb7                       0.019      0.041     -0.061      0.099      1.000  28035.151 
+  consci2, cwb8                       0.006      0.041     -0.075      0.084      1.000  26937.305 
+  consci2, cwb9                       0.010      0.041     -0.072      0.089      1.001  27390.566 
+  consci2, cwb10                     -0.020      0.041     -0.100      0.060      1.000  27915.850 
+  consci2, cwb11                     -0.028      0.041     -0.108      0.052      1.000  27795.683 
+  consci2, cwb12                     -0.055      0.040     -0.133      0.024      1.000  27699.443 
+  consci2, cwb13                      0.013      0.041     -0.067      0.093      1.000  26090.982 
+  consci2, cwb14                     -0.026      0.041     -0.106      0.054      1.000  25829.089 
+  consci2, cwb15                     -0.002      0.040     -0.081      0.078      1.001  27883.929 
+  consci2, cwb16                      0.001      0.041     -0.079      0.081      1.000  27902.600 
+  consci2, cwb17                      0.020      0.041     -0.060      0.098      1.000  26359.732 
+  consci2, cwb18                     -0.009      0.041     -0.089      0.071      1.000  27377.863 
+  consci2, cwb19                     -0.006      0.041     -0.085      0.074      1.001  26562.171 
+  consci2, cwb20                     -0.020      0.041     -0.100      0.061      1.000  26439.651 
+  consci2, cwb21                     -0.004      0.041     -0.083      0.077      1.000  27475.554 
+  consci2, cwb22                     -0.007      0.041     -0.087      0.073      1.000  27611.589 
+  consci2, cwb23                      0.006      0.041     -0.074      0.086      1.000  27302.198 
+  consci3, consci4                    0.003      0.040     -0.076      0.081      1.001  26537.566 
+  consci3, consci5                   -0.024      0.040     -0.103      0.055      1.000  26548.304 
+  consci3, consci6                   -0.004      0.040     -0.082      0.074      1.001  22665.307 
+  consci3, consci7                    0.017      0.040     -0.061      0.096      1.000  25837.521 
+  consci3, consci8                   -0.034      0.040     -0.112      0.044      1.001  24798.578 
+  consci3, consci9                   -0.010      0.040     -0.089      0.067      1.001  24084.374 
+  consci3, consci10                  -0.019      0.040     -0.097      0.060      1.000  25981.217 
+  consci3, orgcon1                    0.002      0.040     -0.076      0.079      1.000  30455.678 
+  consci3, orgcon2                   -0.034      0.040     -0.112      0.044      1.000  29547.500 
+  consci3, orgcon3                    0.018      0.039     -0.057      0.095      1.001  29584.045 
+  consci3, orgcon4                   -0.013      0.039     -0.090      0.064      1.000  27813.816 
+  consci3, orgcon5                    0.001      0.040     -0.077      0.077      1.000  28480.582 
+  consci3, orgcon6                   -0.051      0.040     -0.129      0.026      1.000  30884.133 
+  consci3, orgcon7                    0.070      0.039     -0.006      0.147      1.000  28874.367 
+  consci3, orgcon8                    0.022      0.039     -0.055      0.099      1.000  28476.794 
+  consci3, orgcon9                   -0.004      0.040     -0.082      0.073      1.000  30253.532 
+  consci3, orgcon10                   0.001      0.040     -0.077      0.080      1.000  30137.613 
+  consci3, cwb1                      -0.034      0.040     -0.113      0.046      1.000  27256.424 
+  consci3, cwb2                       0.006      0.041     -0.073      0.086      1.000  25830.422 
+  consci3, cwb3                      -0.018      0.041     -0.099      0.062      1.000  27005.619 
+  consci3, cwb4                      -0.040      0.040     -0.119      0.039      1.000  29032.000 
+  consci3, cwb5                       0.015      0.040     -0.064      0.093      1.000  27512.112 
+  consci3, cwb6                      -0.027      0.041     -0.106      0.053      1.000  26917.951 
+  consci3, cwb7                      -0.020      0.041     -0.100      0.060      1.001  26845.965 
+  consci3, cwb8                      -0.013      0.040     -0.092      0.067      1.000  27458.159 
+  consci3, cwb9                       0.008      0.041     -0.071      0.088      1.000  26732.292 
+  consci3, cwb10                      0.031      0.041     -0.048      0.110      1.000  26850.055 
+  consci3, cwb11                      0.023      0.041     -0.057      0.103      1.000  26460.052 
+  consci3, cwb12                      0.026      0.040     -0.054      0.104      1.000  27481.334 
+  consci3, cwb13                     -0.009      0.040     -0.088      0.070      1.000  26138.990 
+  consci3, cwb14                      0.016      0.041     -0.064      0.096      1.000  26239.933 
+  consci3, cwb15                      0.044      0.040     -0.036      0.122      1.000  26519.354 
+  consci3, cwb16                      0.051      0.041     -0.029      0.130      1.001  26673.183 
+  consci3, cwb17                     -0.027      0.040     -0.105      0.052      1.000  27266.574 
+  consci3, cwb18                      0.052      0.041     -0.028      0.132      1.000  26831.285 
+  consci3, cwb19                     -0.038      0.041     -0.117      0.041      1.000  27583.470 
+  consci3, cwb20                     -0.017      0.041     -0.097      0.063      1.000  26641.302 
+  consci3, cwb21                     -0.022      0.040     -0.101      0.056      1.000  26744.214 
+  consci3, cwb22                     -0.009      0.041     -0.089      0.070      1.000  27130.768 
+  consci3, cwb23                      0.003      0.041     -0.076      0.083      1.000  27133.542 
+  consci4, consci5                    0.008      0.040     -0.071      0.087      1.000  23121.467 
+  consci4, consci6                   -0.007      0.041     -0.086      0.073      1.001  22750.300 
+  consci4, consci7                   -0.018      0.040     -0.097      0.061      1.001  21321.114 
+  consci4, consci8                    0.006      0.040     -0.072      0.085      1.001  22296.778 
+  consci4, consci9                   -0.006      0.040     -0.085      0.072      1.000  25336.715 
+  consci4, consci10                  -0.012      0.040     -0.091      0.066      1.001  20638.850 
+  consci4, orgcon1                    0.014      0.040     -0.064      0.092      1.000  31322.711 
+  consci4, orgcon2                   -0.012      0.040     -0.091      0.066      1.001  29474.322 
+  consci4, orgcon3                   -0.040      0.040     -0.117      0.038      1.000  29762.455 
+  consci4, orgcon4                    0.016      0.040     -0.062      0.094      1.000  30137.879 
+  consci4, orgcon5                   -0.033      0.040     -0.111      0.045      1.001  30127.788 
+  consci4, orgcon6                    0.035      0.040     -0.044      0.113      1.000  31223.112 
+  consci4, orgcon7                   -0.017      0.040     -0.095      0.061      1.000  30729.134 
+  consci4, orgcon8                    0.008      0.040     -0.070      0.087      1.000  28782.782 
+  consci4, orgcon9                    0.017      0.040     -0.061      0.094      1.001  29593.990 
+  consci4, orgcon10                   0.002      0.040     -0.076      0.081      1.000  31538.336 
+  consci4, cwb1                      -0.019      0.041     -0.098      0.061      1.000  27964.023 
+  consci4, cwb2                       0.025      0.041     -0.054      0.104      1.001  27200.594 
+  consci4, cwb3                       0.023      0.041     -0.059      0.103      1.000  28106.839 
+  consci4, cwb4                      -0.016      0.041     -0.096      0.064      1.000  27880.263 
+  consci4, cwb5                       0.019      0.041     -0.061      0.100      1.000  27154.442 
+  consci4, cwb6                      -0.007      0.041     -0.086      0.073      1.000  28575.904 
+  consci4, cwb7                       0.010      0.041     -0.071      0.091      1.001  24999.751 
+  consci4, cwb8                       0.007      0.041     -0.073      0.087      1.000  27832.136 
+  consci4, cwb9                       0.011      0.041     -0.069      0.091      1.000  27746.901 
+  consci4, cwb10                      0.023      0.041     -0.057      0.103      1.001  28153.351 
+  consci4, cwb11                      0.012      0.041     -0.068      0.092      1.000  27068.317 
+  consci4, cwb12                      0.011      0.040     -0.068      0.090      1.000  27659.182 
+  consci4, cwb13                     -0.045      0.041     -0.124      0.035      1.001  28209.021 
+  consci4, cwb14                     -0.019      0.041     -0.099      0.060      1.000  28069.302 
+  consci4, cwb15                      0.002      0.041     -0.078      0.083      1.000  25884.361 
+  consci4, cwb16                      0.008      0.041     -0.072      0.087      1.000  25796.122 
+  consci4, cwb17                      0.003      0.041     -0.076      0.082      1.000  28188.116 
+  consci4, cwb18                      0.002      0.041     -0.078      0.082      1.000  28688.804 
+  consci4, cwb19                      0.016      0.041     -0.065      0.097      1.000  28175.543 
+  consci4, cwb20                     -0.021      0.041     -0.101      0.059      1.000  26303.218 
+  consci4, cwb21                     -0.011      0.041     -0.090      0.069      1.000  29138.781 
+  consci4, cwb22                     -0.012      0.041     -0.092      0.067      1.000  27735.083 
+  consci4, cwb23                      0.005      0.041     -0.075      0.085      1.000  27929.014 
+  consci5, consci6                    0.019      0.040     -0.060      0.098      1.001  23223.002 
+  consci5, consci7                   -0.009      0.040     -0.087      0.071      1.000  23160.131 
+  consci5, consci8                    0.003      0.040     -0.076      0.083      1.001  21209.376 
+  consci5, consci9                    0.001      0.040     -0.079      0.079      1.000  25308.285 
+  consci5, consci10                  -0.006      0.040     -0.085      0.071      1.001  24447.385 
+  consci5, orgcon1                   -0.027      0.039     -0.104      0.051      1.000  31140.304 
+  consci5, orgcon2                    0.019      0.040     -0.059      0.097      1.001  31071.560 
+  consci5, orgcon3                   -0.001      0.040     -0.079      0.078      1.000  30695.651 
+  consci5, orgcon4                   -0.018      0.040     -0.096      0.061      1.000  28097.948 
+  consci5, orgcon5                   -0.033      0.040     -0.111      0.045      1.000  29169.598 
+  consci5, orgcon6                    0.007      0.040     -0.070      0.086      1.000  31803.059 
+  consci5, orgcon7                   -0.028      0.040     -0.106      0.048      1.000  31671.308 
+  consci5, orgcon8                    0.046      0.039     -0.032      0.123      1.000  27547.305 
+  consci5, orgcon9                    0.003      0.040     -0.075      0.081      1.000  30456.205 
+  consci5, orgcon10                   0.009      0.040     -0.069      0.087      1.000  31247.534 
+  consci5, cwb1                       0.027      0.041     -0.053      0.107      1.000  26868.813 
+  consci5, cwb2                      -0.041      0.041     -0.120      0.038      1.000  28077.342 
+  consci5, cwb3                      -0.014      0.041     -0.094      0.067      1.001  25152.866 
+  consci5, cwb4                       0.039      0.040     -0.042      0.117      1.000  26894.524 
+  consci5, cwb5                      -0.019      0.041     -0.100      0.061      1.000  27543.774 
+  consci5, cwb6                      -0.015      0.041     -0.094      0.064      1.001  28453.477 
+  consci5, cwb7                       0.014      0.041     -0.066      0.094      1.000  28466.841 
+  consci5, cwb8                       0.024      0.041     -0.055      0.104      1.000  27855.449 
+  consci5, cwb9                      -0.024      0.040     -0.103      0.056      1.000  28462.982 
+  consci5, cwb10                      0.037      0.041     -0.043      0.116      1.000  27482.284 
+  consci5, cwb11                      0.017      0.040     -0.063      0.096      1.000  27162.088 
+  consci5, cwb12                     -0.025      0.040     -0.105      0.054      1.000  27681.109 
+  consci5, cwb13                      0.002      0.041     -0.077      0.081      1.000  28912.793 
+  consci5, cwb14                     -0.025      0.040     -0.103      0.055      1.000  29005.834 
+  consci5, cwb15                     -0.011      0.040     -0.091      0.067      1.000  27863.127 
+  consci5, cwb16                     -0.025      0.041     -0.105      0.054      1.001  24889.547 
+  consci5, cwb17                      0.004      0.040     -0.076      0.083      1.000  26011.267 
+  consci5, cwb18                     -0.019      0.041     -0.099      0.062      1.000  25715.098 
+  consci5, cwb19                      0.009      0.041     -0.072      0.088      1.000  26760.012 
+  consci5, cwb20                      0.023      0.041     -0.056      0.103      1.000  27161.307 
+  consci5, cwb21                      0.021      0.041     -0.059      0.100      1.000  27146.250 
+  consci5, cwb22                      0.051      0.041     -0.029      0.130      1.000  26076.628 
+  consci5, cwb23                     -0.015      0.041     -0.095      0.065      1.000  28470.133 
+  consci6, consci7                    0.012      0.040     -0.067      0.091      1.000  21957.654 
+  consci6, consci8                   -0.029      0.040     -0.107      0.051      1.001  21341.436 
+  consci6, consci9                    0.040      0.040     -0.039      0.118      1.001  26611.365 
+  consci6, consci10                  -0.005      0.040     -0.083      0.074      1.001  23518.397 
+  consci6, orgcon1                   -0.005      0.040     -0.081      0.074      1.000  30384.628 
+  consci6, orgcon2                   -0.004      0.040     -0.082      0.073      1.000  31035.176 
+  consci6, orgcon3                   -0.011      0.039     -0.087      0.066      1.000  31017.238 
+  consci6, orgcon4                   -0.006      0.039     -0.082      0.071      1.000  29922.293 
+  consci6, orgcon5                   -0.017      0.040     -0.095      0.061      1.000  29274.300 
+  consci6, orgcon6                   -0.004      0.040     -0.082      0.073      1.000  29920.565 
+  consci6, orgcon7                    0.015      0.039     -0.061      0.093      1.000  30720.848 
+  consci6, orgcon8                   -0.028      0.039     -0.104      0.048      1.000  30947.046 
+  consci6, orgcon9                   -0.019      0.040     -0.096      0.059      1.000  30631.261 
+  consci6, orgcon10                   0.071      0.040     -0.007      0.149      1.000  29689.036 
+  consci6, cwb1                       0.025      0.040     -0.054      0.104      1.000  26752.871 
+  consci6, cwb2                      -0.006      0.040     -0.084      0.074      1.000  28091.057 
+  consci6, cwb3                       0.014      0.041     -0.066      0.094      1.000  26426.834 
+  consci6, cwb4                       0.018      0.041     -0.061      0.097      1.000  28092.182 
+  consci6, cwb5                      -0.019      0.041     -0.098      0.062      1.000  26613.448 
+  consci6, cwb6                       0.012      0.040     -0.068      0.090      1.000  27895.422 
+  consci6, cwb7                      -0.023      0.041     -0.103      0.057      1.000  27379.415 
+  consci6, cwb8                       0.036      0.041     -0.044      0.115      1.000  27202.962 
+  consci6, cwb9                       0.033      0.041     -0.048      0.112      1.000  27007.732 
+  consci6, cwb10                     -0.039      0.040     -0.118      0.041      1.000  27664.350 
+  consci6, cwb11                     -0.026      0.040     -0.105      0.053      1.000  25225.938 
+  consci6, cwb12                     -0.010      0.040     -0.089      0.068      1.000  28172.646 
+  consci6, cwb13                     -0.018      0.041     -0.098      0.062      1.000  27259.647 
+  consci6, cwb14                      0.019      0.040     -0.061      0.098      1.000  27929.660 
+  consci6, cwb15                     -0.020      0.041     -0.100      0.060      1.000  29724.859 
+  consci6, cwb16                     -0.022      0.040     -0.101      0.057      1.000  28175.535 
+  consci6, cwb17                      0.012      0.040     -0.067      0.089      1.000  28069.682 
+  consci6, cwb18                      0.027      0.041     -0.054      0.106      1.000  27775.801 
+  consci6, cwb19                     -0.010      0.041     -0.089      0.071      1.000  26700.329 
+  consci6, cwb20                     -0.019      0.041     -0.099      0.061      1.001  25990.079 
+  consci6, cwb21                     -0.018      0.040     -0.097      0.061      1.000  27446.713 
+  consci6, cwb22                      0.015      0.040     -0.064      0.094      1.000  27487.315 
+  consci6, cwb23                      0.012      0.041     -0.068      0.092      1.001  25574.186 
+  consci7, consci8                    0.015      0.040     -0.064      0.093      1.000  23415.314 
+  consci7, consci9                   -0.005      0.040     -0.084      0.074      1.001  22889.524 
+  consci7, consci10                  -0.037      0.040     -0.115      0.042      1.000  22959.993 
+  consci7, orgcon1                    0.025      0.040     -0.052      0.104      1.000  31627.663 
+  consci7, orgcon2                    0.000      0.040     -0.077      0.079      1.000  32069.264 
+  consci7, orgcon3                    0.026      0.039     -0.050      0.103      1.000  30627.721 
+  consci7, orgcon4                   -0.006      0.040     -0.084      0.072      1.001  31885.999 
+  consci7, orgcon5                    0.044      0.040     -0.035      0.122      1.000  29913.900 
+  consci7, orgcon6                   -0.006      0.040     -0.084      0.072      1.000  30400.912 
+  consci7, orgcon7                   -0.023      0.039     -0.100      0.054      1.000  31243.769 
+  consci7, orgcon8                    0.042      0.039     -0.036      0.119      1.000  30035.766 
+  consci7, orgcon9                   -0.041      0.040     -0.119      0.037      1.001  29741.356 
+  consci7, orgcon10                  -0.010      0.040     -0.088      0.069      1.000  30661.662 
+  consci7, cwb1                      -0.039      0.040     -0.117      0.041      1.000  27884.506 
+  consci7, cwb2                       0.039      0.041     -0.040      0.119      1.000  27887.621 
+  consci7, cwb3                       0.015      0.041     -0.065      0.095      1.000  27784.541 
+  consci7, cwb4                       0.001      0.041     -0.079      0.081      1.000  28632.222 
+  consci7, cwb5                       0.015      0.041     -0.065      0.096      1.000  26132.283 
+  consci7, cwb6                       0.017      0.041     -0.062      0.097      1.000  27535.632 
+  consci7, cwb7                      -0.040      0.041     -0.119      0.040      1.000  26856.006 
+  consci7, cwb8                       0.013      0.040     -0.066      0.093      1.001  27966.274 
+  consci7, cwb9                       0.016      0.041     -0.064      0.096      1.000  27946.153 
+  consci7, cwb10                     -0.028      0.041     -0.108      0.051      1.000  26568.425 
+  consci7, cwb11                     -0.024      0.041     -0.104      0.056      1.000  28214.585 
+  consci7, cwb12                     -0.008      0.040     -0.088      0.072      1.001  27679.836 
+  consci7, cwb13                      0.009      0.041     -0.071      0.089      1.000  28356.077 
+  consci7, cwb14                     -0.003      0.041     -0.083      0.076      1.000  28268.821 
+  consci7, cwb15                      0.022      0.040     -0.057      0.101      1.000  26616.207 
+  consci7, cwb16                      0.005      0.041     -0.075      0.085      1.000  27992.180 
+  consci7, cwb17                     -0.050      0.040     -0.128      0.029      1.001  28731.292 
+  consci7, cwb18                     -0.013      0.041     -0.093      0.067      1.000  27574.527 
+  consci7, cwb19                      0.014      0.041     -0.067      0.094      1.000  26433.186 
+  consci7, cwb20                     -0.001      0.041     -0.080      0.079      1.000  27743.424 
+  consci7, cwb21                     -0.014      0.041     -0.093      0.066      1.001  28310.239 
+  consci7, cwb22                     -0.022      0.041     -0.101      0.058      1.000  27548.504 
+  consci7, cwb23                     -0.021      0.041     -0.101      0.059      1.000  25957.589 
+  consci8, consci9                    0.023      0.040     -0.055      0.102      1.000  23095.706 
+  consci8, consci10                   0.016      0.040     -0.062      0.094      1.000  21294.750 
+  consci8, orgcon1                   -0.006      0.040     -0.085      0.071      1.001  31137.054 
+  consci8, orgcon2                    0.006      0.040     -0.073      0.084      1.000  30904.385 
+  consci8, orgcon3                    0.012      0.040     -0.066      0.090      1.000  29595.552 
+  consci8, orgcon4                    0.022      0.040     -0.056      0.099      1.000  30116.736 
+  consci8, orgcon5                   -0.021      0.040     -0.098      0.057      1.000  30706.697 
+  consci8, orgcon6                   -0.002      0.040     -0.079      0.076      1.000  31048.314 
+  consci8, orgcon7                   -0.023      0.040     -0.101      0.055      1.000  31533.485 
+  consci8, orgcon8                   -0.032      0.039     -0.109      0.045      1.001  30337.450 
+  consci8, orgcon9                    0.018      0.040     -0.060      0.095      1.001  29751.041 
+  consci8, orgcon10                  -0.024      0.040     -0.102      0.055      1.000  31236.684 
+  consci8, cwb1                       0.007      0.040     -0.072      0.086      1.000  26210.568 
+  consci8, cwb2                       0.001      0.041     -0.079      0.080      1.000  25744.297 
+  consci8, cwb3                       0.007      0.041     -0.073      0.087      1.000  28783.898 
+  consci8, cwb4                       0.006      0.041     -0.074      0.085      1.000  28156.654 
+  consci8, cwb5                      -0.007      0.041     -0.087      0.073      1.000  27346.525 
+  consci8, cwb6                       0.009      0.040     -0.071      0.088      1.000  28312.645 
+  consci8, cwb7                       0.023      0.041     -0.057      0.103      1.000  28070.647 
+  consci8, cwb8                      -0.019      0.041     -0.100      0.061      1.000  28893.821 
+  consci8, cwb9                      -0.020      0.041     -0.100      0.060      1.000  26796.590 
+  consci8, cwb10                      0.007      0.041     -0.073      0.086      1.000  27397.818 
+  consci8, cwb11                     -0.002      0.041     -0.082      0.078      1.000  26627.761 
+  consci8, cwb12                     -0.004      0.041     -0.084      0.075      1.000  28335.459 
+  consci8, cwb13                      0.029      0.041     -0.051      0.108      1.000  28627.774 
+  consci8, cwb14                     -0.016      0.041     -0.096      0.064      1.000  28145.549 
+  consci8, cwb15                     -0.029      0.041     -0.108      0.051      1.000  27779.449 
+  consci8, cwb16                     -0.011      0.041     -0.091      0.069      1.000  25984.216 
+  consci8, cwb17                      0.007      0.040     -0.072      0.086      1.000  26027.855 
+  consci8, cwb18                      0.021      0.041     -0.059      0.101      1.000  27195.404 
+  consci8, cwb19                     -0.018      0.041     -0.098      0.062      1.000  27434.144 
+  consci8, cwb20                      0.043      0.041     -0.036      0.123      1.000  24339.073 
+  consci8, cwb21                     -0.026      0.041     -0.106      0.054      1.000  26593.495 
+  consci8, cwb22                      0.003      0.041     -0.077      0.082      1.000  25934.317 
+  consci8, cwb23                      0.004      0.041     -0.076      0.085      1.000  27577.587 
+  consci9, consci10                   0.006      0.040     -0.072      0.085      1.000  25128.677 
+  consci9, orgcon1                    0.029      0.040     -0.048      0.107      1.000  31865.755 
+  consci9, orgcon2                   -0.004      0.040     -0.082      0.075      1.000  28817.387 
+  consci9, orgcon3                    0.005      0.040     -0.072      0.083      1.000  29692.470 
+  consci9, orgcon4                   -0.007      0.040     -0.084      0.071      1.001  29937.441 
+  consci9, orgcon5                   -0.006      0.040     -0.084      0.072      1.000  30756.954 
+  consci9, orgcon6                    0.008      0.040     -0.070      0.085      1.000  29914.756 
+  consci9, orgcon7                    0.016      0.040     -0.061      0.094      1.000  29633.875 
+  consci9, orgcon8                    0.008      0.040     -0.070      0.085      1.000  29135.841 
+  consci9, orgcon9                    0.014      0.040     -0.064      0.093      1.000  28897.123 
+  consci9, orgcon10                  -0.048      0.039     -0.125      0.029      1.001  30761.148 
+  consci9, cwb1                      -0.008      0.040     -0.086      0.071      1.000  28537.728 
+  consci9, cwb2                      -0.018      0.040     -0.097      0.061      1.000  26408.503 
+  consci9, cwb3                      -0.026      0.041     -0.106      0.054      1.000  28663.491 
+  consci9, cwb4                      -0.015      0.041     -0.093      0.066      1.000  27108.592 
+  consci9, cwb5                      -0.006      0.041     -0.086      0.073      1.000  26364.800 
+  consci9, cwb6                      -0.006      0.040     -0.086      0.073      1.000  27911.518 
+  consci9, cwb7                       0.037      0.041     -0.043      0.117      1.001  24594.530 
+  consci9, cwb8                       0.010      0.040     -0.068      0.088      1.000  27694.226 
+  consci9, cwb9                       0.001      0.041     -0.079      0.080      1.000  27375.010 
+  consci9, cwb10                     -0.029      0.040     -0.108      0.050      1.000  27875.882 
+  consci9, cwb11                      0.001      0.040     -0.077      0.080      1.000  28033.055 
+  consci9, cwb12                     -0.004      0.040     -0.083      0.074      1.001  26807.364 
+  consci9, cwb13                      0.008      0.040     -0.071      0.088      1.000  25224.073 
+  consci9, cwb14                      0.000      0.041     -0.080      0.081      1.000  26195.234 
+  consci9, cwb15                      0.002      0.040     -0.077      0.081      1.000  27418.538 
+  consci9, cwb16                     -0.017      0.041     -0.096      0.063      1.000  27743.825 
+  consci9, cwb17                      0.005      0.040     -0.075      0.084      1.000  25298.077 
+  consci9, cwb18                      0.001      0.041     -0.078      0.081      1.001  27433.262 
+  consci9, cwb19                      0.006      0.041     -0.073      0.085      1.000  26378.757 
+  consci9, cwb20                      0.010      0.041     -0.070      0.089      1.000  25315.212 
+  consci9, cwb21                      0.067      0.040     -0.013      0.145      1.000  27833.186 
+  consci9, cwb22                      0.004      0.041     -0.077      0.083      1.000  26033.944 
+  consci9, cwb23                     -0.017      0.041     -0.096      0.063      1.000  27454.911 
+  consci10, orgcon1                   0.007      0.039     -0.070      0.083      1.000  31016.959 
+  consci10, orgcon2                   0.027      0.040     -0.051      0.105      1.000  29950.695 
+  consci10, orgcon3                  -0.020      0.039     -0.095      0.057      1.000  31250.690 
+  consci10, orgcon4                  -0.003      0.039     -0.080      0.074      1.000  31550.238 
+  consci10, orgcon5                   0.020      0.040     -0.058      0.097      1.001  30543.788 
+  consci10, orgcon6                   0.020      0.039     -0.057      0.097      1.000  31726.389 
+  consci10, orgcon7                  -0.004      0.039     -0.081      0.074      1.000  32526.293 
+  consci10, orgcon8                  -0.044      0.039     -0.119      0.033      1.000  30007.137 
+  consci10, orgcon9                   0.027      0.039     -0.050      0.104      1.000  28919.021 
+  consci10, orgcon10                 -0.011      0.039     -0.088      0.066      1.000  31339.084 
+  consci10, cwb1                      0.007      0.040     -0.072      0.085      1.000  27854.994 
+  consci10, cwb2                     -0.020      0.040     -0.099      0.059      1.000  28255.118 
+  consci10, cwb3                     -0.051      0.040     -0.129      0.029      1.001  26581.591 
+  consci10, cwb4                      0.017      0.040     -0.062      0.096      1.000  26695.685 
+  consci10, cwb5                      0.018      0.040     -0.062      0.096      1.000  25940.062 
+  consci10, cwb6                      0.009      0.040     -0.070      0.088      1.000  28159.839 
+  consci10, cwb7                     -0.016      0.041     -0.096      0.064      1.000  25776.240 
+  consci10, cwb8                     -0.024      0.041     -0.104      0.055      1.000  28216.869 
+  consci10, cwb9                     -0.024      0.040     -0.102      0.056      1.000  26860.410 
+  consci10, cwb10                    -0.014      0.040     -0.094      0.066      1.000  27097.815 
+  consci10, cwb11                     0.018      0.041     -0.061      0.097      1.000  27985.591 
+  consci10, cwb12                    -0.006      0.040     -0.085      0.072      1.000  27353.652 
+  consci10, cwb13                     0.037      0.040     -0.043      0.115      1.000  27880.368 
+  consci10, cwb14                     0.011      0.040     -0.069      0.090      1.000  27844.984 
+  consci10, cwb15                    -0.040      0.040     -0.117      0.039      1.000  25980.115 
+  consci10, cwb16                    -0.010      0.040     -0.088      0.070      1.001  25386.510 
+  consci10, cwb17                    -0.005      0.040     -0.084      0.074      1.000  26497.517 
+  consci10, cwb18                     0.025      0.040     -0.054      0.104      1.000  27081.610 
+  consci10, cwb19                     0.012      0.040     -0.067      0.091      1.000  25935.618 
+  consci10, cwb20                     0.019      0.041     -0.061      0.099      1.000  26513.989 
+  consci10, cwb21                     0.019      0.040     -0.059      0.098      1.000  29028.674 
+  consci10, cwb22                     0.003      0.040     -0.077      0.081      1.000  27284.056 
+  consci10, cwb23                    -0.010      0.040     -0.089      0.069      1.000  26962.445 
+  orgcon1, orgcon2                   -0.010      0.039     -0.086      0.068      1.000  23485.823 
+  orgcon1, orgcon3                    0.012      0.039     -0.065      0.089      1.001  24363.129 
+  orgcon1, orgcon4                   -0.016      0.039     -0.094      0.061      1.001  23539.670 
+  orgcon1, orgcon5                   -0.026      0.039     -0.103      0.051      1.001  19458.070 
+  orgcon1, orgcon6                    0.025      0.039     -0.052      0.102      1.001  22659.388 
+  orgcon1, orgcon7                   -0.016      0.039     -0.092      0.061      1.000  26235.687 
+  orgcon1, orgcon8                   -0.005      0.039     -0.082      0.070      1.001  20655.830 
+  orgcon1, orgcon9                    0.030      0.039     -0.047      0.106      1.001  18903.583 
+  orgcon1, orgcon10                  -0.010      0.040     -0.087      0.068      1.000  27405.721 
+  orgcon1, cwb1                       0.018      0.040     -0.061      0.096      1.000  28587.734 
+  orgcon1, cwb2                       0.019      0.040     -0.059      0.096      1.000  29075.194 
+  orgcon1, cwb3                       0.004      0.040     -0.075      0.083      1.000  26864.937 
+  orgcon1, cwb4                       0.014      0.040     -0.065      0.093      1.000  26959.911 
+  orgcon1, cwb5                       0.006      0.040     -0.071      0.084      1.000  27156.300 
+  orgcon1, cwb6                      -0.030      0.040     -0.109      0.048      1.001  28946.750 
+  orgcon1, cwb7                       0.003      0.040     -0.075      0.082      1.001  25961.362 
+  orgcon1, cwb8                      -0.014      0.040     -0.093      0.064      1.000  28529.179 
+  orgcon1, cwb9                       0.014      0.040     -0.065      0.093      1.000  28674.557 
+  orgcon1, cwb10                     -0.022      0.040     -0.102      0.056      1.000  26572.873 
+  orgcon1, cwb11                      0.047      0.040     -0.031      0.125      1.000  27962.041 
+  orgcon1, cwb12                     -0.029      0.040     -0.108      0.050      1.000  26116.679 
+  orgcon1, cwb13                     -0.005      0.040     -0.084      0.074      1.001  25970.025 
+  orgcon1, cwb14                     -0.003      0.040     -0.082      0.077      1.000  28363.736 
+  orgcon1, cwb15                     -0.025      0.040     -0.104      0.054      1.000  27160.879 
+  orgcon1, cwb16                      0.023      0.040     -0.057      0.101      1.001  27192.115 
+  orgcon1, cwb17                      0.032      0.040     -0.047      0.111      1.000  27575.268 
+  orgcon1, cwb18                     -0.023      0.040     -0.102      0.055      1.000  28023.061 
+  orgcon1, cwb19                      0.007      0.040     -0.073      0.086      1.000  26420.238 
+  orgcon1, cwb20                      0.018      0.040     -0.061      0.097      1.000  25649.039 
+  orgcon1, cwb21                     -0.006      0.040     -0.084      0.073      1.000  27329.383 
+  orgcon1, cwb22                      0.007      0.040     -0.072      0.086      1.000  26411.481 
+  orgcon1, cwb23                     -0.016      0.040     -0.094      0.062      1.000  27832.533 
+  orgcon2, orgcon3                    0.003      0.039     -0.074      0.080      1.001  19163.785 
+  orgcon2, orgcon4                    0.002      0.040     -0.076      0.079      1.001  21694.413 
+  orgcon2, orgcon5                   -0.039      0.040     -0.116      0.039      1.000  23942.715 
+  orgcon2, orgcon6                   -0.008      0.040     -0.086      0.070      1.000  21008.326 
+  orgcon2, orgcon7                    0.031      0.039     -0.047      0.108      1.001  23195.520 
+  orgcon2, orgcon8                    0.019      0.039     -0.058      0.096      1.000  21309.810 
+  orgcon2, orgcon9                   -0.022      0.040     -0.099      0.055      1.001  19793.827 
+  orgcon2, orgcon10                   0.015      0.040     -0.062      0.094      1.001  20010.472 
+  orgcon2, cwb1                       0.012      0.040     -0.067      0.091      1.000  27789.953 
+  orgcon2, cwb2                      -0.008      0.040     -0.086      0.070      1.000  29377.088 
+  orgcon2, cwb3                      -0.003      0.040     -0.081      0.077      1.000  27775.681 
+  orgcon2, cwb4                       0.028      0.040     -0.051      0.107      1.000  27126.369 
+  orgcon2, cwb5                      -0.032      0.040     -0.110      0.046      1.000  28391.072 
+  orgcon2, cwb6                      -0.011      0.040     -0.090      0.068      1.000  27326.953 
+  orgcon2, cwb7                       0.007      0.040     -0.073      0.086      1.000  26883.445 
+  orgcon2, cwb8                      -0.013      0.040     -0.091      0.066      1.000  27702.841 
+  orgcon2, cwb9                       0.056      0.040     -0.024      0.134      1.000  27820.019 
+  orgcon2, cwb10                      0.008      0.040     -0.072      0.088      1.000  27783.135 
+  orgcon2, cwb11                     -0.028      0.040     -0.106      0.051      1.000  28411.494 
+  orgcon2, cwb12                     -0.003      0.040     -0.081      0.076      1.000  28516.045 
+  orgcon2, cwb13                      0.002      0.040     -0.077      0.081      1.000  28549.853 
+  orgcon2, cwb14                      0.032      0.040     -0.046      0.111      1.000  27883.828 
+  orgcon2, cwb15                     -0.019      0.040     -0.098      0.060      1.000  27869.884 
+  orgcon2, cwb16                      0.007      0.040     -0.072      0.085      1.000  27045.710 
+  orgcon2, cwb17                     -0.022      0.040     -0.100      0.057      1.000  28249.013 
+  orgcon2, cwb18                      0.037      0.040     -0.042      0.115      1.000  28611.158 
+  orgcon2, cwb19                     -0.003      0.040     -0.082      0.076      1.000  27268.506 
+  orgcon2, cwb20                      0.000      0.041     -0.080      0.079      1.000  26677.960 
+  orgcon2, cwb21                     -0.009      0.040     -0.088      0.070      1.001  27076.727 
+  orgcon2, cwb22                     -0.011      0.040     -0.090      0.069      1.001  28044.984 
+  orgcon2, cwb23                     -0.007      0.040     -0.085      0.072      1.000  26618.140 
+  orgcon3, orgcon4                   -0.010      0.039     -0.087      0.065      1.001  21123.488 
+  orgcon3, orgcon5                    0.023      0.039     -0.054      0.100      1.001  21643.505 
+  orgcon3, orgcon6                   -0.003      0.039     -0.080      0.073      1.001  22700.595 
+  orgcon3, orgcon7                    0.024      0.039     -0.053      0.101      1.000  23807.889 
+  orgcon3, orgcon8                   -0.003      0.039     -0.080      0.073      1.000  22354.799 
+  orgcon3, orgcon9                   -0.008      0.039     -0.085      0.069      1.000  21428.802 
+  orgcon3, orgcon10                   0.006      0.039     -0.070      0.083      1.000  25443.943 
+  orgcon3, cwb1                      -0.004      0.040     -0.083      0.074      1.000  28756.144 
+  orgcon3, cwb2                       0.024      0.040     -0.053      0.102      1.000  27291.201 
+  orgcon3, cwb3                      -0.030      0.040     -0.108      0.050      1.000  26645.113 
+  orgcon3, cwb4                      -0.021      0.040     -0.099      0.056      1.000  28308.155 
+  orgcon3, cwb5                       0.018      0.040     -0.060      0.096      1.000  28735.814 
+  orgcon3, cwb6                       0.024      0.040     -0.055      0.103      1.001  27849.184 
+  orgcon3, cwb7                      -0.017      0.040     -0.094      0.062      1.000  28901.293 
+  orgcon3, cwb8                       0.015      0.040     -0.063      0.092      1.000  28520.100 
+  orgcon3, cwb9                      -0.013      0.040     -0.092      0.066      1.000  28701.702 
+  orgcon3, cwb10                     -0.017      0.040     -0.096      0.062      1.000  27475.663 
+  orgcon3, cwb11                      0.026      0.040     -0.052      0.104      1.000  28199.098 
+  orgcon3, cwb12                     -0.005      0.040     -0.084      0.073      1.000  28176.390 
+  orgcon3, cwb13                     -0.032      0.040     -0.111      0.046      1.000  27553.946 
+  orgcon3, cwb14                     -0.034      0.040     -0.111      0.045      1.000  28388.986 
+  orgcon3, cwb15                      0.008      0.040     -0.070      0.086      1.000  28626.901 
+  orgcon3, cwb16                     -0.007      0.040     -0.084      0.072      1.001  27056.578 
+  orgcon3, cwb17                      0.021      0.040     -0.056      0.099      1.000  27312.044 
+  orgcon3, cwb18                      0.040      0.040     -0.038      0.118      1.000  25446.813 
+  orgcon3, cwb19                     -0.033      0.040     -0.112      0.045      1.000  26922.746 
+  orgcon3, cwb20                     -0.014      0.040     -0.092      0.065      1.001  27578.019 
+  orgcon3, cwb21                      0.017      0.040     -0.061      0.095      1.000  26846.146 
+  orgcon3, cwb22                     -0.032      0.040     -0.110      0.046      1.000  26879.319 
+  orgcon3, cwb23                     -0.003      0.040     -0.082      0.075      1.000  28280.116 
+  orgcon4, orgcon5                    0.032      0.039     -0.045      0.109      1.001  22201.760 
+  orgcon4, orgcon6                   -0.045      0.039     -0.122      0.033      1.000  23174.329 
+  orgcon4, orgcon7                   -0.023      0.040     -0.100      0.055      1.001  22179.089 
+  orgcon4, orgcon8                   -0.014      0.039     -0.091      0.063      1.001  24785.612 
+  orgcon4, orgcon9                    0.010      0.039     -0.068      0.086      1.000  20797.629 
+  orgcon4, orgcon10                   0.026      0.039     -0.051      0.103      1.001  23836.208 
+  orgcon4, cwb1                       0.014      0.040     -0.064      0.091      1.000  27499.322 
+  orgcon4, cwb2                      -0.003      0.040     -0.082      0.076      1.000  27014.301 
+  orgcon4, cwb3                       0.037      0.040     -0.042      0.117      1.000  28045.418 
+  orgcon4, cwb4                      -0.019      0.040     -0.099      0.060      1.000  27025.247 
+  orgcon4, cwb5                       0.017      0.040     -0.063      0.095      1.000  28172.396 
+  orgcon4, cwb6                       0.002      0.040     -0.076      0.081      1.000  26533.327 
+  orgcon4, cwb7                      -0.017      0.040     -0.096      0.063      1.000  27001.039 
+  orgcon4, cwb8                      -0.008      0.040     -0.086      0.070      1.000  29177.575 
+  orgcon4, cwb9                       0.007      0.040     -0.071      0.085      1.000  28499.608 
+  orgcon4, cwb10                      0.009      0.040     -0.069      0.088      1.000  27143.331 
+  orgcon4, cwb11                     -0.040      0.040     -0.119      0.038      1.000  27197.839 
+  orgcon4, cwb12                      0.013      0.040     -0.065      0.091      1.000  28808.939 
+  orgcon4, cwb13                     -0.021      0.040     -0.099      0.058      1.000  28053.450 
+  orgcon4, cwb14                      0.000      0.040     -0.078      0.079      1.000  27372.812 
+  orgcon4, cwb15                      0.021      0.040     -0.058      0.099      1.000  27279.293 
+  orgcon4, cwb16                     -0.024      0.040     -0.103      0.055      1.000  26446.252 
+  orgcon4, cwb17                      0.017      0.040     -0.061      0.094      1.000  28019.455 
+  orgcon4, cwb18                     -0.005      0.040     -0.085      0.073      1.000  27510.848 
+  orgcon4, cwb19                     -0.010      0.040     -0.088      0.069      1.000  28498.317 
+  orgcon4, cwb20                     -0.001      0.041     -0.081      0.079      1.001  28370.528 
+  orgcon4, cwb21                      0.017      0.040     -0.062      0.095      1.001  28626.659 
+  orgcon4, cwb22                      0.065      0.040     -0.013      0.143      1.000  27806.787 
+  orgcon4, cwb23                     -0.019      0.040     -0.098      0.059      1.000  28578.391 
+  orgcon5, orgcon6                   -0.001      0.039     -0.077      0.075      1.001  26657.760 
+  orgcon5, orgcon7                   -0.026      0.039     -0.103      0.052      1.000  23561.587 
+  orgcon5, orgcon8                    0.033      0.039     -0.043      0.109      1.001  18133.543 
+  orgcon5, orgcon9                   -0.024      0.039     -0.101      0.052      1.001  21578.271 
+  orgcon5, orgcon10                   0.025      0.039     -0.052      0.101      1.001  18709.111 
+  orgcon5, cwb1                      -0.030      0.040     -0.110      0.048      1.000  27509.320 
+  orgcon5, cwb2                       0.002      0.040     -0.077      0.081      1.000  27694.929 
+  orgcon5, cwb3                      -0.022      0.041     -0.102      0.057      1.000  27006.493 
+  orgcon5, cwb4                      -0.020      0.040     -0.099      0.059      1.000  26288.569 
+  orgcon5, cwb5                      -0.003      0.040     -0.083      0.076      1.000  27107.449 
+  orgcon5, cwb6                       0.009      0.040     -0.070      0.088      1.000  26378.477 
+  orgcon5, cwb7                      -0.008      0.040     -0.087      0.071      1.000  27480.043 
+  orgcon5, cwb8                       0.023      0.040     -0.057      0.101      1.001  28043.603 
+  orgcon5, cwb9                      -0.011      0.040     -0.090      0.067      1.000  28124.652 
+  orgcon5, cwb10                     -0.002      0.040     -0.080      0.077      1.000  27995.906 
+  orgcon5, cwb11                      0.004      0.040     -0.076      0.083      1.000  27579.226 
+  orgcon5, cwb12                      0.003      0.040     -0.076      0.079      1.000  27297.701 
+  orgcon5, cwb13                     -0.019      0.040     -0.098      0.060      1.000  25914.101 
+  orgcon5, cwb14                     -0.018      0.040     -0.096      0.061      1.000  26894.831 
+  orgcon5, cwb15                      0.005      0.040     -0.074      0.083      1.000  26496.062 
+  orgcon5, cwb16                      0.007      0.040     -0.071      0.086      1.000  27158.084 
+  orgcon5, cwb17                      0.033      0.040     -0.046      0.111      1.001  27864.273 
+  orgcon5, cwb18                      0.024      0.040     -0.054      0.103      1.000  28685.254 
+  orgcon5, cwb19                     -0.008      0.040     -0.086      0.072      1.000  27447.679 
+  orgcon5, cwb20                      0.006      0.040     -0.073      0.085      1.000  26361.421 
+  orgcon5, cwb21                      0.026      0.040     -0.053      0.105      1.000  27938.059 
+  orgcon5, cwb22                     -0.029      0.041     -0.108      0.051      1.000  27009.138 
+  orgcon5, cwb23                      0.011      0.040     -0.067      0.090      1.000  27940.382 
+  orgcon6, orgcon7                    0.041      0.039     -0.036      0.117      1.001  21330.509 
+  orgcon6, orgcon8                    0.027      0.039     -0.050      0.104      1.000  20968.472 
+  orgcon6, orgcon9                    0.002      0.039     -0.075      0.079      1.001  21284.323 
+  orgcon6, orgcon10                  -0.011      0.040     -0.089      0.066      1.001  26298.206 
+  orgcon6, cwb1                      -0.037      0.040     -0.116      0.042      1.001  27410.602 
+  orgcon6, cwb2                       0.008      0.040     -0.071      0.088      1.000  27907.655 
+  orgcon6, cwb3                      -0.036      0.041     -0.114      0.045      1.000  26152.799 
+  orgcon6, cwb4                       0.008      0.040     -0.071      0.087      1.000  27778.887 
+  orgcon6, cwb5                       0.020      0.040     -0.059      0.099      1.000  27767.372 
+  orgcon6, cwb6                       0.046      0.040     -0.034      0.124      1.000  27841.691 
+  orgcon6, cwb7                       0.032      0.040     -0.047      0.111      1.001  26661.615 
+  orgcon6, cwb8                      -0.001      0.040     -0.080      0.078      1.001  27931.819 
+  orgcon6, cwb9                      -0.021      0.040     -0.100      0.058      1.000  29550.838 
+  orgcon6, cwb10                      0.025      0.040     -0.053      0.104      1.000  28445.031 
+  orgcon6, cwb11                     -0.017      0.040     -0.095      0.062      1.000  28789.234 
+  orgcon6, cwb12                     -0.053      0.040     -0.131      0.026      1.001  27198.112 
+  orgcon6, cwb13                      0.042      0.040     -0.037      0.120      1.000  28788.501 
+  orgcon6, cwb14                      0.010      0.040     -0.069      0.089      1.000  27948.524 
+  orgcon6, cwb15                     -0.015      0.040     -0.094      0.064      1.000  27201.536 
+  orgcon6, cwb16                     -0.000      0.040     -0.079      0.079      1.000  26812.732 
+  orgcon6, cwb17                     -0.004      0.040     -0.082      0.074      1.000  27297.037 
+  orgcon6, cwb18                     -0.033      0.040     -0.111      0.047      1.000  27748.455 
+  orgcon6, cwb19                      0.021      0.041     -0.058      0.101      1.000  27333.435 
+  orgcon6, cwb20                     -0.032      0.040     -0.111      0.048      1.000  26143.075 
+  orgcon6, cwb21                      0.004      0.040     -0.074      0.081      1.001  27891.256 
+  orgcon6, cwb22                     -0.018      0.040     -0.097      0.062      1.000  26703.690 
+  orgcon6, cwb23                      0.014      0.040     -0.066      0.093      1.000  28124.717 
+  orgcon7, orgcon8                    0.000      0.039     -0.077      0.077      1.001  22560.427 
+  orgcon7, orgcon9                   -0.016      0.039     -0.093      0.061      1.000  25275.736 
+  orgcon7, orgcon10                  -0.014      0.039     -0.091      0.064      1.000  23774.766 
+  orgcon7, cwb1                       0.009      0.040     -0.070      0.088      1.000  26381.235 
+  orgcon7, cwb2                      -0.054      0.040     -0.132      0.025      1.000  28467.288 
+  orgcon7, cwb3                      -0.031      0.040     -0.108      0.048      1.000  28110.377 
+  orgcon7, cwb4                       0.007      0.040     -0.071      0.086      1.000  28440.560 
+  orgcon7, cwb5                      -0.038      0.040     -0.117      0.040      1.000  27273.458 
+  orgcon7, cwb6                      -0.005      0.040     -0.083      0.073      1.001  28116.910 
+  orgcon7, cwb7                      -0.032      0.040     -0.110      0.046      1.000  27843.344 
+  orgcon7, cwb8                      -0.031      0.040     -0.109      0.046      1.000  29537.832 
+  orgcon7, cwb9                      -0.012      0.040     -0.090      0.065      1.000  28186.352 
+  orgcon7, cwb10                     -0.017      0.040     -0.096      0.062      1.000  28222.737 
+  orgcon7, cwb11                      0.053      0.040     -0.026      0.130      1.000  27720.371 
+  orgcon7, cwb12                      0.028      0.040     -0.050      0.105      1.001  28510.971 
+  orgcon7, cwb13                     -0.021      0.040     -0.101      0.058      1.000  28428.051 
+  orgcon7, cwb14                     -0.016      0.040     -0.094      0.062      1.000  27291.127 
+  orgcon7, cwb15                      0.033      0.040     -0.046      0.111      1.000  27059.341 
+  orgcon7, cwb16                      0.000      0.040     -0.078      0.078      1.000  26918.046 
+  orgcon7, cwb17                      0.039      0.040     -0.039      0.117      1.000  28189.218 
+  orgcon7, cwb18                      0.015      0.040     -0.063      0.094      1.000  26279.600 
+  orgcon7, cwb19                      0.034      0.040     -0.045      0.112      1.000  26992.724 
+  orgcon7, cwb20                      0.024      0.040     -0.055      0.103      1.000  27754.933 
+  orgcon7, cwb21                      0.017      0.040     -0.061      0.094      1.000  27668.660 
+  orgcon7, cwb22                     -0.013      0.040     -0.092      0.064      1.001  27191.199 
+  orgcon7, cwb23                      0.010      0.040     -0.067      0.090      1.001  28060.058 
+  orgcon8, orgcon9                   -0.004      0.039     -0.080      0.073      1.001  21107.948 
+  orgcon8, orgcon10                  -0.049      0.039     -0.125      0.028      1.000  21999.840 
+  orgcon8, cwb1                       0.000      0.040     -0.077      0.079      1.000  27232.428 
+  orgcon8, cwb2                      -0.006      0.040     -0.085      0.073      1.000  26231.799 
+  orgcon8, cwb3                       0.014      0.040     -0.065      0.094      1.000  25980.854 
+  orgcon8, cwb4                      -0.018      0.040     -0.096      0.061      1.000  27307.773 
+  orgcon8, cwb5                      -0.003      0.041     -0.081      0.077      1.000  25916.128 
+  orgcon8, cwb6                       0.008      0.040     -0.071      0.087      1.001  26413.570 
+  orgcon8, cwb7                       0.007      0.040     -0.072      0.086      1.000  24940.226 
+  orgcon8, cwb8                       0.025      0.040     -0.054      0.103      1.000  28177.822 
+  orgcon8, cwb9                       0.001      0.040     -0.078      0.079      1.001  27408.025 
+  orgcon8, cwb10                     -0.013      0.040     -0.092      0.066      1.000  26084.806 
+  orgcon8, cwb11                     -0.001      0.040     -0.080      0.077      1.000  25938.090 
+  orgcon8, cwb12                     -0.012      0.040     -0.090      0.066      1.000  23819.248 
+  orgcon8, cwb13                     -0.027      0.040     -0.106      0.052      1.000  25919.055 
+  orgcon8, cwb14                      0.035      0.040     -0.045      0.113      1.000  26960.398 
+  orgcon8, cwb15                     -0.017      0.040     -0.096      0.062      1.000  25608.627 
+  orgcon8, cwb16                      0.022      0.040     -0.057      0.101      1.000  25910.154 
+  orgcon8, cwb17                      0.025      0.040     -0.053      0.103      1.000  26566.528 
+  orgcon8, cwb18                      0.008      0.040     -0.071      0.087      1.000  28717.162 
+  orgcon8, cwb19                      0.017      0.040     -0.062      0.096      1.000  25599.222 
+  orgcon8, cwb20                     -0.016      0.040     -0.094      0.063      1.000  25609.412 
+  orgcon8, cwb21                     -0.024      0.040     -0.102      0.054      1.000  26144.276 
+  orgcon8, cwb22                     -0.031      0.040     -0.110      0.049      1.000  26969.344 
+  orgcon8, cwb23                     -0.020      0.040     -0.098      0.059      1.000  26257.527 
+  orgcon9, orgcon10                  -0.010      0.039     -0.087      0.068      1.000  24872.412 
+  orgcon9, cwb1                      -0.002      0.040     -0.080      0.077      1.000  27328.463 
+  orgcon9, cwb2                       0.018      0.040     -0.061      0.096      1.000  27567.672 
+  orgcon9, cwb3                       0.041      0.040     -0.038      0.120      1.001  27202.087 
+  orgcon9, cwb4                      -0.006      0.040     -0.086      0.072      1.001  25646.217 
+  orgcon9, cwb5                       0.021      0.040     -0.059      0.100      1.000  26999.712 
+  orgcon9, cwb6                      -0.007      0.040     -0.086      0.072      1.000  27849.662 
+  orgcon9, cwb7                      -0.011      0.040     -0.090      0.067      1.000  27481.108 
+  orgcon9, cwb8                       0.024      0.040     -0.055      0.102      1.000  28018.580 
+  orgcon9, cwb9                      -0.010      0.040     -0.089      0.068      1.000  26527.025 
+  orgcon9, cwb10                      0.011      0.040     -0.068      0.091      1.000  27540.937 
+  orgcon9, cwb11                     -0.021      0.040     -0.100      0.058      1.001  27679.710 
+  orgcon9, cwb12                     -0.019      0.040     -0.096      0.060      1.000  27492.586 
+  orgcon9, cwb13                      0.007      0.040     -0.071      0.086      1.000  28229.584 
+  orgcon9, cwb14                      0.032      0.040     -0.047      0.111      1.000  27247.854 
+  orgcon9, cwb15                      0.027      0.040     -0.052      0.105      1.000  29495.751 
+  orgcon9, cwb16                      0.010      0.040     -0.068      0.088      1.000  26576.982 
+  orgcon9, cwb17                     -0.056      0.040     -0.134      0.023      1.000  26630.535 
+  orgcon9, cwb18                     -0.012      0.040     -0.091      0.066      1.000  27305.444 
+  orgcon9, cwb19                      0.010      0.040     -0.068      0.089      1.000  26396.056 
+  orgcon9, cwb20                     -0.009      0.040     -0.088      0.070      1.000  26254.064 
+  orgcon9, cwb21                     -0.017      0.040     -0.095      0.061      1.000  28407.090 
+  orgcon9, cwb22                     -0.005      0.040     -0.083      0.075      1.000  27203.759 
+  orgcon9, cwb23                      0.029      0.040     -0.050      0.107      1.000  26998.626 
+  orgcon10, cwb1                      0.006      0.040     -0.072      0.084      1.000  27544.550 
+  orgcon10, cwb2                     -0.022      0.040     -0.101      0.057      1.000  28848.320 
+  orgcon10, cwb3                     -0.009      0.040     -0.089      0.069      1.000  27468.657 
+  orgcon10, cwb4                      0.018      0.040     -0.060      0.096      1.000  28171.393 
+  orgcon10, cwb5                      0.027      0.040     -0.053      0.105      1.000  28323.856 
+  orgcon10, cwb6                      0.028      0.040     -0.052      0.107      1.000  27488.641 
+  orgcon10, cwb7                      0.013      0.040     -0.066      0.091      1.000  27514.046 
+  orgcon10, cwb8                     -0.021      0.040     -0.099      0.058      1.000  28882.102 
+  orgcon10, cwb9                     -0.023      0.040     -0.102      0.055      1.001  28397.811 
+  orgcon10, cwb10                     0.011      0.040     -0.067      0.090      1.000  27285.233 
+  orgcon10, cwb11                    -0.011      0.040     -0.089      0.069      1.000  26905.503 
+  orgcon10, cwb12                     0.026      0.040     -0.053      0.104      1.000  27985.375 
+  orgcon10, cwb13                     0.021      0.040     -0.058      0.099      1.000  27675.170 
+  orgcon10, cwb14                    -0.041      0.040     -0.120      0.038      1.000  28065.911 
+  orgcon10, cwb15                     0.001      0.040     -0.078      0.079      1.000  28442.811 
+  orgcon10, cwb16                    -0.025      0.040     -0.103      0.054      1.000  28352.577 
+  orgcon10, cwb17                    -0.022      0.040     -0.102      0.057      1.000  27017.282 
+  orgcon10, cwb18                    -0.017      0.040     -0.096      0.061      1.000  28643.757 
+  orgcon10, cwb19                    -0.002      0.040     -0.081      0.076      1.000  27234.237 
+  orgcon10, cwb20                     0.023      0.040     -0.057      0.101      1.000  27270.503 
+  orgcon10, cwb21                     0.004      0.040     -0.074      0.083      1.000  26890.065 
+  orgcon10, cwb22                     0.034      0.040     -0.044      0.112      1.000  29345.581 
+  orgcon10, cwb23                    -0.006      0.040     -0.085      0.073      1.000  27472.192 
+  cwb1, cwb2                          0.022      0.040     -0.057      0.101      1.001  25885.332 
+  cwb1, cwb3                          0.005      0.041     -0.076      0.084      1.000  25934.520 
+  cwb1, cwb4                         -0.016      0.040     -0.095      0.063      1.000  26360.248 
+  cwb1, cwb5                         -0.017      0.041     -0.097      0.063      1.000  26094.670 
+  cwb1, cwb6                         -0.049      0.041     -0.128      0.031      1.001  26267.721 
+  cwb1, cwb7                          0.034      0.041     -0.046      0.114      1.000  24877.826 
+  cwb1, cwb8                         -0.036      0.041     -0.115      0.044      1.000  27760.663 
+  cwb1, cwb9                          0.011      0.041     -0.069      0.090      1.001  25154.061 
+  cwb1, cwb10                         0.008      0.041     -0.072      0.089      1.000  26774.114 
+  cwb1, cwb11                        -0.013      0.041     -0.093      0.066      1.001  24406.881 
+  cwb1, cwb12                         0.011      0.041     -0.070      0.090      1.000  24712.015 
+  cwb1, cwb13                         0.021      0.041     -0.058      0.100      1.000  26048.186 
+  cwb1, cwb14                         0.005      0.041     -0.074      0.085      1.000  26980.255 
+  cwb1, cwb15                         0.004      0.041     -0.076      0.085      1.000  25506.344 
+  cwb1, cwb16                        -0.030      0.041     -0.110      0.049      1.000  24181.244 
+  cwb1, cwb17                        -0.001      0.041     -0.081      0.080      1.000  25390.284 
+  cwb1, cwb18                         0.001      0.041     -0.079      0.082      1.000  26842.859 
+  cwb1, cwb19                        -0.004      0.041     -0.083      0.076      1.001  26311.967 
+  cwb1, cwb20                         0.037      0.041     -0.043      0.116      1.000  25034.339 
+  cwb1, cwb21                        -0.003      0.041     -0.083      0.077      1.000  27317.852 
+  cwb1, cwb22                         0.014      0.041     -0.066      0.093      1.000  26572.738 
+  cwb1, cwb23                         0.001      0.041     -0.078      0.082      1.000  25807.180 
+  cwb2, cwb3                          0.009      0.041     -0.070      0.089      1.000  25789.760 
+  cwb2, cwb4                         -0.001      0.040     -0.079      0.079      1.001  26290.633 
+  cwb2, cwb5                          0.008      0.041     -0.072      0.087      1.000  26112.127 
+  cwb2, cwb6                         -0.012      0.041     -0.091      0.068      1.000  27121.121 
+  cwb2, cwb7                         -0.028      0.041     -0.107      0.052      1.001  26130.145 
+  cwb2, cwb8                         -0.027      0.040     -0.106      0.052      1.000  25515.072 
+  cwb2, cwb9                          0.028      0.041     -0.053      0.107      1.000  24870.205 
+  cwb2, cwb10                         0.002      0.041     -0.078      0.081      1.000  25351.671 
+  cwb2, cwb11                        -0.021      0.040     -0.100      0.058      1.001  27513.814 
+  cwb2, cwb12                         0.029      0.041     -0.049      0.109      1.000  24551.971 
+  cwb2, cwb13                         0.006      0.040     -0.073      0.085      1.000  27005.245 
+  cwb2, cwb14                        -0.002      0.041     -0.082      0.078      1.000  26240.057 
+  cwb2, cwb15                        -0.025      0.041     -0.104      0.055      1.000  25067.965 
+  cwb2, cwb16                         0.055      0.041     -0.025      0.134      1.000  24790.160 
+  cwb2, cwb17                        -0.021      0.041     -0.099      0.059      1.000  26861.122 
+  cwb2, cwb18                         0.006      0.041     -0.074      0.086      1.001  25172.369 
+  cwb2, cwb19                        -0.028      0.040     -0.107      0.052      1.000  25941.867 
+  cwb2, cwb20                         0.012      0.041     -0.068      0.092      1.000  25586.923 
+  cwb2, cwb21                        -0.015      0.041     -0.094      0.065      1.000  27379.150 
+  cwb2, cwb22                        -0.014      0.041     -0.094      0.066      1.001  27702.598 
+  cwb2, cwb23                         0.021      0.041     -0.058      0.100      1.001  26271.746 
+  cwb3, cwb4                         -0.014      0.041     -0.094      0.066      1.000  25420.130 
+  cwb3, cwb5                          0.014      0.041     -0.066      0.094      1.000  26484.287 
+  cwb3, cwb6                         -0.008      0.041     -0.087      0.073      1.000  26162.852 
+  cwb3, cwb7                         -0.036      0.041     -0.116      0.045      1.000  25633.856 
+  cwb3, cwb8                          0.018      0.041     -0.062      0.098      1.001  27964.562 
+  cwb3, cwb9                         -0.022      0.041     -0.101      0.058      1.000  26987.053 
+  cwb3, cwb10                         0.017      0.041     -0.063      0.097      1.000  25283.904 
+  cwb3, cwb11                         0.008      0.041     -0.072      0.088      1.000  25588.474 
+  cwb3, cwb12                         0.011      0.041     -0.069      0.091      1.001  26025.933 
+  cwb3, cwb13                         0.008      0.041     -0.072      0.088      1.000  24941.793 
+  cwb3, cwb14                         0.009      0.041     -0.071      0.089      1.000  27631.890 
+  cwb3, cwb15                         0.008      0.041     -0.072      0.088      1.000  26205.920 
+  cwb3, cwb16                         0.031      0.041     -0.049      0.111      1.000  26265.884 
+  cwb3, cwb17                        -0.016      0.041     -0.096      0.064      1.001  25861.568 
+  cwb3, cwb18                        -0.044      0.041     -0.124      0.037      1.000  24819.002 
+  cwb3, cwb19                         0.016      0.041     -0.065      0.095      1.000  27415.971 
+  cwb3, cwb20                        -0.028      0.041     -0.108      0.053      1.001  25193.756 
+  cwb3, cwb21                        -0.015      0.041     -0.096      0.065      1.000  26718.951 
+  cwb3, cwb22                         0.051      0.041     -0.029      0.130      1.000  26759.872 
+  cwb3, cwb23                        -0.008      0.041     -0.088      0.073      1.000  21651.435 
+  cwb4, cwb5                          0.005      0.041     -0.076      0.086      1.000  25239.061 
+  cwb4, cwb6                         -0.001      0.041     -0.080      0.078      1.001  28501.177 
+  cwb4, cwb7                          0.041      0.040     -0.038      0.119      1.000  25264.341 
+  cwb4, cwb8                          0.021      0.040     -0.060      0.100      1.000  26261.981 
+  cwb4, cwb9                         -0.054      0.041     -0.133      0.026      1.001  27763.096 
+  cwb4, cwb10                        -0.016      0.041     -0.095      0.065      1.000  25986.501 
+  cwb4, cwb11                         0.018      0.041     -0.062      0.098      1.000  24882.191 
+  cwb4, cwb12                        -0.022      0.041     -0.102      0.058      1.001  25938.042 
+  cwb4, cwb13                        -0.022      0.041     -0.101      0.058      1.000  25901.488 
+  cwb4, cwb14                         0.019      0.041     -0.061      0.099      1.000  25764.727 
+  cwb4, cwb15                         0.004      0.041     -0.075      0.084      1.001  26989.798 
+  cwb4, cwb16                         0.000      0.041     -0.080      0.080      1.001  26621.925 
+  cwb4, cwb17                        -0.011      0.041     -0.090      0.069      1.000  26378.110 
+  cwb4, cwb18                         0.003      0.041     -0.077      0.083      1.000  26855.462 
+  cwb4, cwb19                        -0.012      0.041     -0.091      0.068      1.000  26207.421 
+  cwb4, cwb20                         0.019      0.041     -0.061      0.099      1.000  25494.367 
+  cwb4, cwb21                         0.018      0.040     -0.061      0.096      1.000  27268.280 
+  cwb4, cwb22                         0.013      0.041     -0.066      0.093      1.000  27543.060 
+  cwb4, cwb23                         0.009      0.041     -0.070      0.090      1.000  26456.630 
+  cwb5, cwb6                          0.047      0.041     -0.033      0.126      1.000  26298.069 
+  cwb5, cwb7                         -0.003      0.041     -0.083      0.077      1.000  26698.071 
+  cwb5, cwb8                          0.019      0.041     -0.061      0.099      1.000  27230.874 
+  cwb5, cwb9                          0.034      0.041     -0.046      0.113      1.000  25944.315 
+  cwb5, cwb10                        -0.025      0.041     -0.105      0.056      1.000  26306.304 
+  cwb5, cwb11                        -0.004      0.041     -0.084      0.077      1.000  26535.496 
+  cwb5, cwb12                         0.004      0.041     -0.076      0.084      1.000  26027.899 
+  cwb5, cwb13                        -0.020      0.041     -0.100      0.060      1.000  26746.063 
+  cwb5, cwb14                        -0.013      0.041     -0.093      0.067      1.000  25163.227 
+  cwb5, cwb15                        -0.011      0.041     -0.091      0.069      1.000  26296.607 
+  cwb5, cwb16                         0.015      0.041     -0.065      0.095      1.001  24157.027 
+  cwb5, cwb17                         0.001      0.041     -0.079      0.081      1.000  26568.998 
+  cwb5, cwb18                         0.017      0.041     -0.063      0.098      1.001  24516.445 
+  cwb5, cwb19                        -0.037      0.041     -0.117      0.042      1.000  25162.352 
+  cwb5, cwb20                        -0.020      0.041     -0.100      0.061      1.000  25432.147 
+  cwb5, cwb21                        -0.032      0.041     -0.112      0.049      1.001  25670.049 
+  cwb5, cwb22                        -0.012      0.041     -0.091      0.068      1.000  25475.286 
+  cwb5, cwb23                         0.015      0.041     -0.065      0.096      1.000  26202.410 
+  cwb6, cwb7                         -0.029      0.041     -0.108      0.052      1.000  26159.022 
+  cwb6, cwb8                         -0.022      0.041     -0.102      0.058      1.000  28284.687 
+  cwb6, cwb9                          0.006      0.041     -0.075      0.086      1.000  26403.003 
+  cwb6, cwb10                         0.016      0.041     -0.063      0.096      1.000  28093.570 
+  cwb6, cwb11                        -0.004      0.041     -0.083      0.077      1.001  26898.677 
+  cwb6, cwb12                        -0.006      0.041     -0.086      0.073      1.000  26538.692 
+  cwb6, cwb13                        -0.026      0.041     -0.106      0.054      1.000  25971.066 
+  cwb6, cwb14                        -0.005      0.041     -0.085      0.075      1.000  26547.080 
+  cwb6, cwb15                         0.028      0.041     -0.052      0.107      1.000  25893.500 
+  cwb6, cwb16                        -0.016      0.041     -0.096      0.064      1.000  26115.077 
+  cwb6, cwb17                         0.014      0.041     -0.065      0.095      1.000  25656.335 
+  cwb6, cwb18                        -0.001      0.041     -0.081      0.078      1.000  25614.037 
+  cwb6, cwb19                        -0.014      0.040     -0.093      0.065      1.000  26050.788 
+  cwb6, cwb20                         0.013      0.041     -0.067      0.093      1.000  24360.630 
+  cwb6, cwb21                         0.013      0.041     -0.067      0.093      1.000  26425.363 
+  cwb6, cwb22                         0.013      0.040     -0.066      0.092      1.000  26299.271 
+  cwb6, cwb23                         0.001      0.041     -0.079      0.082      1.000  25451.412 
+  cwb7, cwb8                          0.026      0.041     -0.054      0.104      1.000  25857.469 
+  cwb7, cwb9                          0.011      0.041     -0.070      0.091      1.000  26389.848 
+  cwb7, cwb10                        -0.022      0.041     -0.102      0.058      1.000  24594.221 
+  cwb7, cwb11                         0.028      0.041     -0.053      0.108      1.000  25944.952 
+  cwb7, cwb12                        -0.044      0.041     -0.124      0.036      1.000  25395.975 
+  cwb7, cwb13                         0.040      0.041     -0.041      0.119      1.000  25670.128 
+  cwb7, cwb14                         0.034      0.041     -0.046      0.113      1.000  25250.954 
+  cwb7, cwb15                        -0.003      0.041     -0.083      0.077      1.001  25910.988 
+  cwb7, cwb16                        -0.038      0.041     -0.118      0.042      1.000  24455.879 
+  cwb7, cwb17                         0.007      0.041     -0.073      0.087      1.000  25908.313 
+  cwb7, cwb18                        -0.030      0.041     -0.110      0.050      1.000  26608.845 
+  cwb7, cwb19                        -0.004      0.041     -0.084      0.076      1.000  24772.325 
+  cwb7, cwb20                         0.045      0.041     -0.035      0.125      1.000  24804.487 
+  cwb7, cwb21                        -0.045      0.041     -0.126      0.034      1.000  26965.707 
+  cwb7, cwb22                         0.002      0.041     -0.079      0.083      1.001  25759.970 
+  cwb7, cwb23                         0.032      0.041     -0.048      0.111      1.000  25408.656 
+  cwb8, cwb9                          0.019      0.041     -0.062      0.098      1.000  27185.202 
+  cwb8, cwb10                        -0.004      0.040     -0.084      0.075      1.000  26972.415 
+  cwb8, cwb11                         0.034      0.041     -0.045      0.114      1.000  25506.074 
+  cwb8, cwb12                        -0.025      0.040     -0.104      0.054      1.000  25670.227 
+  cwb8, cwb13                        -0.011      0.041     -0.090      0.069      1.000  27307.011 
+  cwb8, cwb14                        -0.016      0.041     -0.096      0.064      1.000  26260.065 
+  cwb8, cwb15                        -0.040      0.040     -0.120      0.038      1.000  25990.776 
+  cwb8, cwb16                         0.009      0.041     -0.071      0.089      1.000  25495.118 
+  cwb8, cwb17                         0.007      0.041     -0.073      0.086      1.000  25589.792 
+  cwb8, cwb18                         0.018      0.041     -0.062      0.097      1.000  26623.193 
+  cwb8, cwb19                         0.020      0.041     -0.060      0.100      1.000  25816.639 
+  cwb8, cwb20                        -0.025      0.041     -0.104      0.056      1.000  25961.239 
+  cwb8, cwb21                         0.028      0.040     -0.051      0.107      1.000  25803.071 
+  cwb8, cwb22                        -0.004      0.040     -0.083      0.075      1.000  27106.274 
+  cwb8, cwb23                        -0.015      0.041     -0.094      0.065      1.000  25616.623 
+  cwb9, cwb10                         0.010      0.041     -0.071      0.089      1.000  27085.292 
+  cwb9, cwb11                         0.008      0.041     -0.072      0.088      1.001  26756.335 
+  cwb9, cwb12                        -0.011      0.041     -0.092      0.068      1.000  25198.479 
+  cwb9, cwb13                        -0.018      0.041     -0.097      0.062      1.001  27273.760 
+  cwb9, cwb14                        -0.003      0.041     -0.084      0.077      1.000  26677.210 
+  cwb9, cwb15                         0.004      0.041     -0.076      0.085      1.000  26119.577 
+  cwb9, cwb16                         0.052      0.041     -0.028      0.131      1.001  26676.140 
+  cwb9, cwb17                        -0.013      0.041     -0.093      0.068      1.000  26002.600 
+  cwb9, cwb18                         0.025      0.041     -0.054      0.105      1.000  27005.049 
+  cwb9, cwb19                        -0.023      0.041     -0.103      0.057      1.000  26877.654 
+  cwb9, cwb20                        -0.045      0.041     -0.125      0.035      1.000  25643.823 
+  cwb9, cwb21                         0.001      0.041     -0.079      0.081      1.000  27806.381 
+  cwb9, cwb22                         0.009      0.041     -0.070      0.090      1.000  26304.137 
+  cwb9, cwb23                        -0.029      0.041     -0.109      0.051      1.000  25934.923 
+  cwb10, cwb11                       -0.033      0.041     -0.112      0.047      1.000  27162.581 
+  cwb10, cwb12                        0.010      0.041     -0.069      0.090      1.000  26557.907 
+  cwb10, cwb13                       -0.019      0.041     -0.099      0.060      1.000  27466.799 
+  cwb10, cwb14                       -0.009      0.041     -0.090      0.071      1.000  26912.264 
+  cwb10, cwb15                       -0.004      0.041     -0.083      0.076      1.000  27480.133 
+  cwb10, cwb16                       -0.025      0.041     -0.105      0.055      1.001  26444.180 
+  cwb10, cwb17                       -0.000      0.041     -0.080      0.079      1.000  25759.058 
+  cwb10, cwb18                        0.003      0.041     -0.076      0.083      1.000  26333.136 
+  cwb10, cwb19                        0.021      0.041     -0.059      0.100      1.000  25657.825 
+  cwb10, cwb20                       -0.015      0.041     -0.095      0.065      1.001  27135.367 
+  cwb10, cwb21                        0.021      0.040     -0.058      0.100      1.000  28361.074 
+  cwb10, cwb22                        0.039      0.041     -0.040      0.118      1.000  24122.988 
+  cwb10, cwb23                        0.019      0.041     -0.061      0.099      1.000  26803.948 
+  cwb11, cwb12                       -0.011      0.041     -0.091      0.069      1.001  25470.342 
+  cwb11, cwb13                        0.017      0.041     -0.064      0.096      1.000  27219.132 
+  cwb11, cwb14                        0.038      0.041     -0.042      0.116      1.000  27016.527 
+  cwb11, cwb15                        0.017      0.041     -0.063      0.097      1.000  25249.558 
+  cwb11, cwb16                       -0.008      0.041     -0.088      0.071      1.000  26440.551 
+  cwb11, cwb17                        0.021      0.041     -0.059      0.101      1.000  25776.064 
+  cwb11, cwb18                       -0.040      0.041     -0.119      0.041      1.000  26344.289 
+  cwb11, cwb19                        0.030      0.041     -0.049      0.111      1.000  27097.922 
+  cwb11, cwb20                        0.007      0.041     -0.074      0.087      1.000  25714.865 
+  cwb11, cwb21                       -0.012      0.041     -0.090      0.068      1.000  26410.734 
+  cwb11, cwb22                       -0.055      0.041     -0.134      0.025      1.000  26937.774 
+  cwb11, cwb23                       -0.032      0.041     -0.111      0.049      1.000  27199.209 
+  cwb12, cwb13                        0.014      0.040     -0.066      0.092      1.000  26627.581 
+  cwb12, cwb14                        0.003      0.041     -0.077      0.083      1.001  26744.341 
+  cwb12, cwb15                        0.030      0.041     -0.049      0.110      1.000  26289.415 
+  cwb12, cwb16                       -0.007      0.040     -0.086      0.072      1.001  25601.262 
+  cwb12, cwb17                       -0.027      0.041     -0.106      0.054      1.000  24483.193 
+  cwb12, cwb18                        0.031      0.040     -0.048      0.110      1.001  25159.246 
+  cwb12, cwb19                        0.016      0.041     -0.063      0.096      1.000  24359.861 
+  cwb12, cwb20                        0.018      0.040     -0.061      0.097      1.000  27048.590 
+  cwb12, cwb21                       -0.001      0.040     -0.081      0.078      1.000  25863.389 
+  cwb12, cwb22                       -0.007      0.041     -0.087      0.072      1.001  25752.693 
+  cwb12, cwb23                       -0.006      0.041     -0.085      0.074      1.000  25768.992 
+  cwb13, cwb14                       -0.002      0.041     -0.082      0.078      1.000  24482.324 
+  cwb13, cwb15                       -0.009      0.041     -0.088      0.071      1.000  27086.937 
+  cwb13, cwb16                       -0.025      0.041     -0.105      0.055      1.000  26282.976 
+  cwb13, cwb17                       -0.004      0.041     -0.084      0.075      1.000  25736.520 
+  cwb13, cwb18                       -0.013      0.041     -0.094      0.066      1.000  27103.277 
+  cwb13, cwb19                       -0.004      0.041     -0.084      0.076      1.001  26323.945 
+  cwb13, cwb20                        0.024      0.041     -0.056      0.103      1.000  24217.831 
+  cwb13, cwb21                        0.025      0.041     -0.055      0.104      1.000  25926.059 
+  cwb13, cwb22                       -0.012      0.041     -0.091      0.069      1.000  24901.676 
+  cwb13, cwb23                        0.039      0.041     -0.042      0.118      1.000  26677.810 
+  cwb14, cwb15                       -0.011      0.041     -0.091      0.070      1.001  25753.426 
+  cwb14, cwb16                       -0.024      0.041     -0.105      0.055      1.000  25083.338 
+  cwb14, cwb17                        0.006      0.041     -0.075      0.086      1.000  26038.463 
+  cwb14, cwb18                       -0.008      0.041     -0.088      0.072      1.000  27225.155 
+  cwb14, cwb19                        0.019      0.040     -0.060      0.098      1.001  26205.065 
+  cwb14, cwb20                       -0.023      0.041     -0.103      0.057      1.001  25275.543 
+  cwb14, cwb21                        0.008      0.041     -0.072      0.088      1.000  26860.722 
+  cwb14, cwb22                       -0.030      0.041     -0.111      0.050      1.001  26753.451 
+  cwb14, cwb23                        0.003      0.041     -0.078      0.082      1.001  25778.533 
+  cwb15, cwb16                       -0.035      0.041     -0.114      0.045      1.000  24585.921 
+  cwb15, cwb17                       -0.000      0.041     -0.081      0.079      1.000  25643.123 
+  cwb15, cwb18                        0.005      0.040     -0.075      0.084      1.000  26598.176 
+  cwb15, cwb19                        0.016      0.041     -0.064      0.095      1.000  25678.371 
+  cwb15, cwb20                        0.010      0.041     -0.070      0.091      1.000  24710.671 
+  cwb15, cwb21                       -0.000      0.041     -0.080      0.079      1.000  27182.394 
+  cwb15, cwb22                        0.000      0.041     -0.079      0.080      1.000  25825.491 
+  cwb15, cwb23                       -0.009      0.041     -0.089      0.072      1.000  24689.336 
+  cwb16, cwb17                       -0.004      0.041     -0.085      0.075      1.000  27156.290 
+  cwb16, cwb18                        0.007      0.041     -0.074      0.086      1.000  27093.622 
+  cwb16, cwb19                       -0.002      0.041     -0.082      0.078      1.001  26682.746 
+  cwb16, cwb20                       -0.003      0.041     -0.084      0.078      1.000  25882.922 
+  cwb16, cwb21                        0.021      0.041     -0.058      0.101      1.000  27388.677 
+  cwb16, cwb22                       -0.013      0.041     -0.093      0.067      1.000  25833.943 
+  cwb16, cwb23                        0.035      0.041     -0.044      0.114      1.000  25934.166 
+  cwb17, cwb18                       -0.009      0.041     -0.089      0.072      1.001  27743.408 
+  cwb17, cwb19                        0.000      0.040     -0.079      0.079      1.000  25959.014 
+  cwb17, cwb20                        0.012      0.041     -0.068      0.091      1.000  25875.891 
+  cwb17, cwb21                        0.012      0.041     -0.067      0.092      1.001  27176.682 
+  cwb17, cwb22                        0.010      0.041     -0.070      0.090      1.000  24898.407 
+  cwb17, cwb23                       -0.022      0.041     -0.101      0.058      1.000  26297.909 
+  cwb18, cwb19                       -0.019      0.041     -0.099      0.061      1.001  27437.696 
+  cwb18, cwb20                        0.029      0.041     -0.052      0.109      1.000  24284.263 
+  cwb18, cwb21                       -0.003      0.041     -0.083      0.077      1.000  26726.253 
+  cwb18, cwb22                        0.017      0.041     -0.064      0.096      1.000  26971.201 
+  cwb18, cwb23                        0.010      0.041     -0.071      0.090      1.000  25617.839 
+  cwb19, cwb20                        0.010      0.041     -0.071      0.090      1.000  25832.399 
+  cwb19, cwb21                       -0.001      0.041     -0.081      0.078      1.000  26232.882 
+  cwb19, cwb22                       -0.017      0.041     -0.096      0.064      1.000  26583.384 
+  cwb19, cwb23                       -0.019      0.041     -0.099      0.061      1.000  27767.797 
+  cwb20, cwb21                       -0.026      0.041     -0.106      0.053      1.000  24723.959 
+  cwb20, cwb22                       -0.006      0.041     -0.087      0.074      1.000  25959.483 
+  cwb20, cwb23                       -0.037      0.041     -0.116      0.043      1.000  25834.548 
+  cwb21, cwb22                        0.008      0.040     -0.071      0.087      1.000  27716.992 
+  cwb21, cwb23                       -0.011      0.041     -0.091      0.068      1.000  26791.165 
+  cwb22, cwb23                        0.002      0.041     -0.078      0.082      1.000  27718.366 
+
+                                -------------------------------------------------------------------
+
+
+
+OUTCOME MODEL ESTIMATES:
+
+  Summaries based on 50000 iterations using 10 chains.
+
+  cwb_model block:
+
+Latent Variable:   cwb        
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                   @   1.000       ---        ---        ---        ---        ---  
+
+Coefficients:                   
+  consci                             -0.300      0.040     -0.379     -0.223      1.001   7066.439 
+  orgcon                              0.632      0.045      0.546      0.721      1.002   4219.977 
+  consci*orgcon                      -0.223      0.042     -0.307     -0.142      1.001   6832.825 
+
+Standardized Coefficients:      
+  consci                             -0.238      0.029     -0.295     -0.180      1.001   8775.840 
+  orgcon                              0.502      0.026      0.449      0.550      1.002   5288.770 
+  consci*orgcon                      -0.173      0.031     -0.234     -0.112      1.001   7642.781 
+
+Proportion Variance Explained   
+  by Coefficients                     0.362      0.026      0.310      0.412      1.002   3240.622 
+  by Residual Variation               0.638      0.026      0.588      0.690      1.002   3240.622 
+
+                                -------------------------------------------------------------------
+
+
+
+Conditional Effects                  Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+  consci | orgcon @ -1                                                                             
+    Intercept                        -0.632      0.045     -0.721     -0.546      1.002   4219.977 
+    Slope                            -0.076      0.055     -0.184      0.031      1.001   7474.884 
+                                                                                                   
+  consci | orgcon @ 0                                                                              
+    Intercept                         0.000      0.000      0.000      0.000        nan        nan 
+    Slope                            -0.300      0.040     -0.379     -0.223      1.001   7066.439 
+                                                                                                   
+  consci | orgcon @ 1                                                                              
+    Intercept                         0.632      0.045      0.546      0.721      1.002   4219.977 
+    Slope                            -0.523      0.061     -0.646     -0.406      1.001   6724.369 
+                                                                                                   
+                                -------------------------------------------------------------------
+
+                                NOTE: Intercepts are computed by setting all predictors
+                                      not involved in the conditional effect to zero.
+
+
+  predictor_model block:
+
+Latent Variable:   consci     
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                   @   1.000       ---        ---        ---        ---        ---  
+
+Proportion Variance Explained   
+  by Coefficients                     0.000      0.000      0.000      0.000        nan        nan 
+  by Residual Variation               1.000      0.000      1.000      1.000        nan        nan 
+
+                                -------------------------------------------------------------------
+
+
+
+Latent Variable:   orgcon     
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                   @   1.000       ---        ---        ---        ---        ---  
+
+Proportion Variance Explained   
+  by Coefficients                     0.000      0.000      0.000      0.000        nan        nan 
+  by Residual Variation               1.000      0.000      1.000      1.000        nan        nan 
+
+                                -------------------------------------------------------------------
+
+
+
+Covariance Matrix: consci orgcon
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Covariances:                    
+  Cov(consci,orgcon)                 -0.150      0.035     -0.218     -0.080      1.001  19705.140 
+
+Correlations:                   
+  Cor(consci,orgcon)                 -0.150      0.035     -0.218     -0.080      1.001  19705.140 
+
+                                -------------------------------------------------------------------
+
+
+  measurement_consci block:
+
+Outcome Variable:  consci1    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           2.319      0.103      2.121      2.520      1.025    411.226 
+  consci                              1.202      0.068      1.071      1.340      1.011   1006.280 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               0.769      0.074      0.634      0.920      1.014    569.545 
+  Tau 3                               1.517      0.089      1.348      1.694      1.022    393.676 
+  Tau 4                               2.668      0.107      2.461      2.878      1.024    358.455 
+
+Standardized Coefficients:      
+  consci                              0.767      0.017      0.732      0.797      1.011    918.070 
+
+Proportion Variance Explained   
+  by Coefficients                     0.588      0.025      0.536      0.635      1.011    913.262 
+  by Residual Variation               0.412      0.025      0.365      0.464      1.011    913.262 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  consci2    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           2.205      0.095      2.023      2.391      1.016    577.665 
+  consci                              1.053      0.062      0.934      1.180      1.008   1309.073 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               0.660      0.067      0.534      0.798      1.014    707.630 
+  Tau 3                               1.462      0.084      1.298      1.636      1.020    520.587 
+  Tau 4                               2.543      0.099      2.352      2.746      1.023    437.824 
+
+Standardized Coefficients:      
+  consci                              0.723      0.019      0.683      0.757      1.009   1175.381 
+
+Proportion Variance Explained   
+  by Coefficients                     0.522      0.027      0.467      0.574      1.009   1172.755 
+  by Residual Variation               0.478      0.027      0.426      0.533      1.009   1172.755 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  consci3    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           2.094      0.089      1.925      2.272      1.017    665.354 
+  consci                              0.954      0.058      0.844      1.068      1.007   1791.301 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               0.641      0.067      0.518      0.778      1.013    774.216 
+  Tau 3                               1.395      0.080      1.243      1.556      1.018    593.668 
+  Tau 4                               2.375      0.092      2.195      2.561      1.021    544.997 
+
+Standardized Coefficients:      
+  consci                              0.688      0.020      0.645      0.725      1.007   1769.447 
+
+Proportion Variance Explained   
+  by Coefficients                     0.473      0.028      0.416      0.526      1.007   1758.718 
+  by Residual Variation               0.527      0.028      0.474      0.584      1.007   1758.718 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  consci4    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           2.149      0.093      1.973      2.341      1.013    545.755 
+  consci                              1.083      0.063      0.963      1.212      1.006   1396.466 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               0.728      0.067      0.602      0.867      1.006    683.417 
+  Tau 3                               1.411      0.081      1.259      1.576      1.013    500.967 
+  Tau 4                               2.401      0.096      2.222      2.596      1.014    454.725 
+
+Standardized Coefficients:      
+  consci                              0.732      0.018      0.695      0.766      1.006   1279.825 
+
+Proportion Variance Explained   
+  by Coefficients                     0.536      0.027      0.482      0.587      1.006   1274.488 
+  by Residual Variation               0.464      0.027      0.413      0.518      1.006   1274.488 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  consci5    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           2.178      0.095      1.999      2.366      1.018    583.204 
+  consci                              0.999      0.060      0.885      1.120      1.008   1613.493 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               0.720      0.071      0.592      0.872      1.012    696.866 
+  Tau 3                               1.381      0.085      1.228      1.559      1.018    533.064 
+  Tau 4                               2.424      0.100      2.240      2.622      1.019    515.967 
+
+Standardized Coefficients:      
+  consci                              0.705      0.020      0.663      0.740      1.008   1510.564 
+
+Proportion Variance Explained   
+  by Coefficients                     0.496      0.028      0.440      0.548      1.008   1509.507 
+  by Residual Variation               0.504      0.028      0.452      0.560      1.008   1509.507 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  consci6    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           2.237      0.093      2.062      2.426      1.028    521.314 
+  consci                              0.981      0.058      0.872      1.098      1.010   1776.052 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               0.830      0.074      0.695      0.985      1.017    590.738 
+  Tau 3                               1.513      0.085      1.356      1.687      1.025    474.321 
+  Tau 4                               2.555      0.097      2.373      2.750      1.027    458.445 
+
+Standardized Coefficients:      
+  consci                              0.698      0.020      0.658      0.734      1.011   1592.435 
+
+Proportion Variance Explained   
+  by Coefficients                     0.487      0.027      0.433      0.539      1.011   1586.261 
+  by Residual Variation               0.513      0.027      0.461      0.567      1.011   1586.261 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  consci7    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           2.064      0.089      1.893      2.243      1.007    662.560 
+  consci                              1.021      0.061      0.905      1.143      1.003   1671.569 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               0.622      0.064      0.501      0.754      1.003    842.313 
+  Tau 3                               1.315      0.078      1.169      1.475      1.004    638.144 
+  Tau 4                               2.398      0.095      2.214      2.587      1.005    581.438 
+
+Standardized Coefficients:      
+  consci                              0.712      0.019      0.672      0.748      1.003   1549.475 
+
+Proportion Variance Explained   
+  by Coefficients                     0.507      0.028      0.451      0.559      1.003   1549.069 
+  by Residual Variation               0.493      0.028      0.441      0.549      1.003   1549.069 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  consci8    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           2.211      0.094      2.033      2.402      1.019    615.272 
+  consci                              1.068      0.062      0.950      1.192      1.010   1361.870 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               0.782      0.071      0.649      0.931      1.017    754.363 
+  Tau 3                               1.474      0.084      1.316      1.646      1.026    585.791 
+  Tau 4                               2.535      0.098      2.351      2.727      1.028    519.950 
+
+Standardized Coefficients:      
+  consci                              0.728      0.018      0.689      0.761      1.010   1374.005 
+
+Proportion Variance Explained   
+  by Coefficients                     0.530      0.027      0.475      0.580      1.010   1370.883 
+  by Residual Variation               0.470      0.027      0.420      0.525      1.010   1370.883 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  consci9    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           2.108      0.088      1.933      2.281      1.028    692.709 
+  consci                              0.966      0.058      0.855      1.081      1.007   2024.651 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               0.695      0.066      0.569      0.827      1.020    775.989 
+  Tau 3                               1.325      0.078      1.174      1.476      1.029    634.173 
+  Tau 4                               2.386      0.091      2.205      2.563      1.029    607.450 
+
+Standardized Coefficients:      
+  consci                              0.692      0.020      0.651      0.729      1.007   2015.041 
+
+Proportion Variance Explained   
+  by Coefficients                     0.479      0.028      0.424      0.532      1.007   2012.875 
+  by Residual Variation               0.521      0.028      0.468      0.576      1.007   2012.875 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  consci10   
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           2.141      0.090      1.970      2.326      1.012    433.053 
+  consci                              0.915      0.056      0.810      1.028      1.004   1478.690 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               0.837      0.072      0.705      0.989      1.009    567.633 
+  Tau 3                               1.494      0.083      1.342      1.666      1.009    438.409 
+  Tau 4                               2.454      0.096      2.277      2.657      1.012    399.624 
+
+Standardized Coefficients:      
+  consci                              0.673      0.021      0.630      0.712      1.004   1464.425 
+
+Proportion Variance Explained   
+  by Coefficients                     0.453      0.028      0.397      0.507      1.004   1443.895 
+  by Residual Variation               0.547      0.028      0.493      0.603      1.004   1443.895 
+
+                                -------------------------------------------------------------------
+
+
+  measurement_org block:
+
+Outcome Variable:  orgcon1    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           1.428      0.070      1.294      1.570      1.007    784.415 
+  orgcon                              0.987      0.056      0.882      1.100      1.005   1500.550 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.424      0.070      1.291      1.565      1.014    591.578 
+  Tau 3                               2.139      0.082      1.976      2.303      1.014    522.906 
+  Tau 4                               2.887      0.097      2.697      3.081      1.013    546.043 
+
+Standardized Coefficients:      
+  orgcon                              0.700      0.018      0.663      0.735      1.004   1457.135 
+
+Proportion Variance Explained   
+  by Coefficients                     0.490      0.026      0.439      0.540      1.004   1454.896 
+  by Residual Variation               0.510      0.026      0.460      0.561      1.004   1454.896 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  orgcon2    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           1.492      0.074      1.349      1.638      1.023    667.916 
+  orgcon                              1.066      0.059      0.955      1.185      1.011   1186.446 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.535      0.073      1.395      1.681      1.025    554.242 
+  Tau 3                               2.244      0.087      2.077      2.417      1.029    496.120 
+  Tau 4                               2.957      0.103      2.759      3.162      1.030    439.724 
+
+Standardized Coefficients:      
+  orgcon                              0.727      0.017      0.691      0.759      1.013   1045.087 
+
+Proportion Variance Explained   
+  by Coefficients                     0.529      0.025      0.478      0.576      1.013   1043.582 
+  by Residual Variation               0.471      0.025      0.424      0.522      1.013   1043.582 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  orgcon3    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           1.337      0.069      1.206      1.477      1.011    851.091 
+  orgcon                              0.943      0.054      0.843      1.052      1.005   1512.656 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.320      0.066      1.198      1.457      1.015    679.506 
+  Tau 3                               1.994      0.079      1.848      2.154      1.016    596.858 
+  Tau 4                               2.765      0.093      2.588      2.955      1.017    606.999 
+
+Standardized Coefficients:      
+  orgcon                              0.684      0.019      0.645      0.719      1.006   1571.749 
+
+Proportion Variance Explained   
+  by Coefficients                     0.468      0.026      0.416      0.517      1.006   1565.759 
+  by Residual Variation               0.532      0.026      0.483      0.584      1.006   1565.759 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  orgcon4    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           1.376      0.070      1.244      1.517      1.010    846.663 
+  orgcon                              1.002      0.055      0.897      1.115      1.005   1692.732 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.416      0.068      1.288      1.552      1.012    685.806 
+  Tau 3                               2.088      0.079      1.935      2.245      1.013    600.450 
+  Tau 4                               2.781      0.094      2.608      2.966      1.014    587.387 
+
+Standardized Coefficients:      
+  orgcon                              0.706      0.018      0.668      0.739      1.005   1452.471 
+
+Proportion Variance Explained   
+  by Coefficients                     0.498      0.025      0.447      0.546      1.005   1454.943 
+  by Residual Variation               0.502      0.025      0.454      0.553      1.005   1454.943 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  orgcon5    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           1.493      0.073      1.354      1.638      1.018    809.697 
+  orgcon                              1.002      0.055      0.897      1.112      1.008   1575.234 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.469      0.071      1.332      1.614      1.023    679.120 
+  Tau 3                               2.216      0.082      2.058      2.382      1.023    592.981 
+  Tau 4                               2.931      0.096      2.748      3.125      1.022    591.460 
+
+Standardized Coefficients:      
+  orgcon                              0.706      0.018      0.669      0.738      1.008   1446.193 
+
+Proportion Variance Explained   
+  by Coefficients                     0.498      0.025      0.448      0.545      1.008   1446.430 
+  by Residual Variation               0.502      0.025      0.455      0.552      1.008   1446.430 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  orgcon6    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           1.403      0.070      1.271      1.547      1.014    766.076 
+  orgcon                              1.019      0.056      0.914      1.134      1.006   1693.543 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.464      0.068      1.334      1.601      1.017    681.159 
+  Tau 3                               2.124      0.080      1.974      2.287      1.017    625.933 
+  Tau 4                               2.804      0.093      2.629      2.993      1.019    634.897 
+
+Standardized Coefficients:      
+  orgcon                              0.712      0.018      0.675      0.745      1.008   1507.382 
+
+Proportion Variance Explained   
+  by Coefficients                     0.506      0.025      0.456      0.555      1.008   1500.054 
+  by Residual Variation               0.494      0.025      0.445      0.544      1.008   1500.054 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  orgcon7    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           1.316      0.069      1.183      1.451      1.014    747.938 
+  orgcon                              0.953      0.054      0.849      1.060      1.007   1524.668 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.414      0.068      1.283      1.553      1.015    622.131 
+  Tau 3                               2.138      0.081      1.980      2.301      1.017    556.591 
+  Tau 4                               2.769      0.095      2.584      2.956      1.017    555.064 
+
+Standardized Coefficients:      
+  orgcon                              0.688      0.019      0.648      0.722      1.007   1411.131 
+
+Proportion Variance Explained   
+  by Coefficients                     0.473      0.026      0.421      0.521      1.007   1409.970 
+  by Residual Variation               0.527      0.026      0.479      0.579      1.007   1409.970 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  orgcon8    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           1.443      0.070      1.307      1.585      1.026    538.567 
+  orgcon                              0.931      0.053      0.830      1.041      1.011   1271.676 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.458      0.070      1.326      1.604      1.029    464.550 
+  Tau 3                               2.106      0.081      1.956      2.274      1.032    412.053 
+  Tau 4                               2.760      0.093      2.585      2.953      1.033    388.465 
+
+Standardized Coefficients:      
+  orgcon                              0.679      0.019      0.640      0.715      1.013   1105.379 
+
+Proportion Variance Explained   
+  by Coefficients                     0.461      0.026      0.409      0.512      1.013   1097.574 
+  by Residual Variation               0.539      0.026      0.488      0.591      1.013   1097.574 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  orgcon9    
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           1.409      0.069      1.277      1.547      1.008    801.054 
+  orgcon                              0.987      0.054      0.884      1.097      1.004   1686.540 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.418      0.068      1.288      1.555      1.008    702.066 
+  Tau 3                               2.165      0.080      2.011      2.321      1.009    590.016 
+  Tau 4                               2.891      0.096      2.704      3.079      1.010    583.745 
+
+Standardized Coefficients:      
+  orgcon                              0.701      0.018      0.663      0.734      1.004   1574.534 
+
+Proportion Variance Explained   
+  by Coefficients                     0.491      0.025      0.439      0.538      1.004   1569.692 
+  by Residual Variation               0.509      0.025      0.462      0.561      1.004   1569.692 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  orgcon10   
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           1.375      0.069      1.242      1.511      1.007    914.616 
+  orgcon                              1.056      0.055      0.950      1.168      1.005   2071.502 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.421      0.066      1.292      1.551      1.008    802.326 
+  Tau 3                               2.123      0.077      1.967      2.271      1.009    712.744 
+  Tau 4                               2.923      0.092      2.735      3.097      1.010    695.683 
+
+Standardized Coefficients:      
+  orgcon                              0.724      0.016      0.690      0.754      1.005   1892.615 
+
+Proportion Variance Explained   
+  by Coefficients                     0.524      0.024      0.475      0.569      1.005   1891.201 
+  by Residual Variation               0.476      0.024      0.431      0.525      1.005   1891.201 
+
+                                -------------------------------------------------------------------
+
+
+  measurement_cwb block:
+
+Outcome Variable:  cwb1       
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.031      0.056     -0.141      0.078      1.006   1757.535 
+  cwb                                 0.776      0.047      0.688      0.871      1.005   1984.815 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.416      0.067      1.289      1.551      1.005   2493.878 
+  Tau 3                               2.671      0.120      2.446      2.913      1.009   1236.814 
+  Tau 4                               3.051      0.144      2.767      3.333      1.010   1041.958 
+
+Standardized Coefficients:      
+  cwb                                 0.695      0.019      0.654      0.730      1.003   2563.191 
+
+Proportion Variance Explained   
+  by Coefficients                     0.482      0.027      0.428      0.533      1.003   2559.787 
+  by Residual Variation               0.518      0.027      0.467      0.572      1.003   2559.787 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb2       
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           0.040      0.058     -0.073      0.154      1.010   1491.430 
+  cwb                                 0.837      0.048      0.747      0.934      1.006   1830.588 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.525      0.071      1.392      1.673      1.007   1904.025 
+  Tau 3                               2.900      0.127      2.659      3.157      1.017    908.313 
+  Tau 4                               3.146      0.142      2.871      3.432      1.017    863.193 
+
+Standardized Coefficients:      
+  cwb                                 0.721      0.018      0.685      0.754      1.007   2106.885 
+
+Proportion Variance Explained   
+  by Coefficients                     0.520      0.026      0.469      0.569      1.007   2103.454 
+  by Residual Variation               0.480      0.026      0.431      0.531      1.007   2103.454 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb3       
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.034      0.061     -0.154      0.088      1.007   1502.166 
+  cwb                                 0.944      0.054      0.843      1.052      1.005   1288.827 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.583      0.078      1.439      1.741      1.002   1961.835 
+  Tau 3                               3.070      0.143      2.796      3.360      1.006    888.772 
+  Tau 4                               3.532      0.178      3.210      3.899      1.007    829.824 
+
+Standardized Coefficients:      
+  cwb                                 0.762      0.016      0.728      0.791      1.005   1566.818 
+
+Proportion Variance Explained   
+  by Coefficients                     0.580      0.025      0.529      0.625      1.005   1563.269 
+  by Residual Variation               0.420      0.025      0.375      0.471      1.005   1563.269 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb4       
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.017      0.056     -0.126      0.094      1.008   1684.976 
+  cwb                                 0.809      0.048      0.720      0.905      1.004   1884.892 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.395      0.066      1.268      1.528      1.005   1679.847 
+  Tau 3                               2.703      0.120      2.479      2.946      1.008    772.252 
+  Tau 4                               2.888      0.132      2.637      3.157      1.009    774.951 
+
+Standardized Coefficients:      
+  cwb                                 0.709      0.019      0.671      0.744      1.003   2235.681 
+
+Proportion Variance Explained   
+  by Coefficients                     0.503      0.026      0.450      0.553      1.003   2230.790 
+  by Residual Variation               0.497      0.026      0.447      0.550      1.003   2230.790 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb5       
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.030      0.059     -0.146      0.084      1.008   1588.804 
+  cwb                                 0.852      0.050      0.759      0.954      1.006   1650.023 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.543      0.074      1.404      1.694      1.007   1942.757 
+  Tau 3                               2.912      0.137      2.655      3.193      1.016    978.071 
+  Tau 4                               3.355      0.174      3.037      3.719      1.015    930.632 
+
+Standardized Coefficients:      
+  cwb                                 0.727      0.018      0.690      0.761      1.007   2106.004 
+
+Proportion Variance Explained   
+  by Coefficients                     0.529      0.026      0.476      0.579      1.007   2102.774 
+  by Residual Variation               0.471      0.026      0.421      0.524      1.007   2102.774 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb6       
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.076      0.056     -0.187      0.034      1.006   1951.691 
+  cwb                                 0.815      0.048      0.724      0.912      1.005   2117.986 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.345      0.068      1.214      1.482      1.004   2338.633 
+  Tau 3                               2.734      0.127      2.489      2.995      1.008   1224.319 
+  Tau 4                               3.245      0.164      2.933      3.575      1.008   1120.525 
+
+Standardized Coefficients:      
+  cwb                                 0.712      0.019      0.673      0.746      1.004   2512.121 
+
+Proportion Variance Explained   
+  by Coefficients                     0.507      0.027      0.453      0.557      1.005   2509.108 
+  by Residual Variation               0.493      0.027      0.443      0.547      1.005   2509.108 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb7       
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.041      0.057     -0.152      0.072      1.005   1737.981 
+  cwb                                 0.847      0.049      0.753      0.946      1.005   1701.236 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.458      0.069      1.327      1.598      1.004   2732.286 
+  Tau 3                               2.972      0.139      2.721      3.261      1.009   1136.819 
+  Tau 4                               3.425      0.176      3.110      3.799      1.010    892.314 
+
+Standardized Coefficients:      
+  cwb                                 0.725      0.018      0.687      0.758      1.003   2032.134 
+
+Proportion Variance Explained   
+  by Coefficients                     0.526      0.026      0.472      0.574      1.003   2028.702 
+  by Residual Variation               0.474      0.026      0.426      0.528      1.003   2028.702 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb8       
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.006      0.056     -0.118      0.102      1.008   1680.716 
+  cwb                                 0.794      0.047      0.706      0.890      1.003   2310.562 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.453      0.069      1.321      1.591      1.004   2518.412 
+  Tau 3                               2.783      0.124      2.546      3.035      1.004   1192.061 
+  Tau 4                               3.353      0.168      3.036      3.704      1.005   1009.605 
+
+Standardized Coefficients:      
+  cwb                                 0.703      0.019      0.663      0.738      1.002   2909.518 
+
+Proportion Variance Explained   
+  by Coefficients                     0.494      0.026      0.440      0.544      1.002   2901.353 
+  by Residual Variation               0.506      0.026      0.456      0.560      1.002   2901.353 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb9       
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.049      0.057     -0.161      0.061      1.008   1657.490 
+  cwb                                 0.827      0.049      0.735      0.929      1.005   1737.096 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.455      0.070      1.322      1.594      1.005   2370.127 
+  Tau 3                               3.001      0.148      2.741      3.316      1.012    991.585 
+  Tau 4                               3.405      0.186      3.074      3.803      1.014    920.181 
+
+Standardized Coefficients:      
+  cwb                                 0.717      0.019      0.679      0.752      1.004   2255.527 
+
+Proportion Variance Explained   
+  by Coefficients                     0.514      0.027      0.461      0.565      1.004   2248.977 
+  by Residual Variation               0.486      0.027      0.435      0.539      1.004   2248.977 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb10      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.121      0.057     -0.234     -0.011      1.005   1806.796 
+  cwb                                 0.821      0.049      0.729      0.920      1.005   1812.264 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.391      0.070      1.257      1.528      1.003   2143.722 
+  Tau 3                               2.674      0.128      2.424      2.935      1.006   1113.596 
+  Tau 4                               3.181      0.162      2.867      3.507      1.008   1104.390 
+
+Standardized Coefficients:      
+  cwb                                 0.715      0.019      0.675      0.749      1.003   2121.627 
+
+Proportion Variance Explained   
+  by Coefficients                     0.511      0.027      0.456      0.561      1.003   2117.199 
+  by Residual Variation               0.489      0.027      0.439      0.544      1.003   2117.199 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb11      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.049      0.057     -0.161      0.064      1.006   1674.915 
+  cwb                                 0.829      0.049      0.737      0.929      1.007   1907.620 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.498      0.072      1.359      1.643      1.005   2200.566 
+  Tau 3                               2.895      0.134      2.646      3.167      1.010    988.315 
+  Tau 4                               3.248      0.162      2.948      3.570      1.012    933.331 
+
+Standardized Coefficients:      
+  cwb                                 0.718      0.019      0.680      0.752      1.005   2175.734 
+
+Proportion Variance Explained   
+  by Coefficients                     0.516      0.026      0.462      0.566      1.005   2171.279 
+  by Residual Variation               0.484      0.026      0.434      0.538      1.005   2171.279 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb12      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                           0.025      0.055     -0.083      0.133      1.007   1767.855 
+  cwb                                 0.775      0.047      0.688      0.870      1.005   1448.174 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.382      0.067      1.253      1.515      1.007   1945.995 
+  Tau 3                               2.768      0.124      2.537      3.025      1.019    677.036 
+  Tau 4                               3.022      0.139      2.763      3.310      1.017    657.004 
+
+Standardized Coefficients:      
+  cwb                                 0.694      0.019      0.655      0.730      1.006   1704.275 
+
+Proportion Variance Explained   
+  by Coefficients                     0.482      0.027      0.429      0.533      1.006   1699.596 
+  by Residual Variation               0.518      0.027      0.467      0.571      1.006   1699.596 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb13      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.034      0.056     -0.144      0.073      1.005   1863.812 
+  cwb                                 0.804      0.048      0.713      0.901      1.003   1842.197 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.499      0.072      1.361      1.646      1.003   2373.325 
+  Tau 3                               2.872      0.137      2.614      3.150      1.007   1194.496 
+  Tau 4                               3.404      0.188      3.059      3.796      1.010    906.191 
+
+Standardized Coefficients:      
+  cwb                                 0.707      0.019      0.667      0.742      1.004   2216.159 
+
+Proportion Variance Explained   
+  by Coefficients                     0.500      0.027      0.445      0.551      1.004   2213.817 
+  by Residual Variation               0.500      0.027      0.449      0.555      1.004   2213.817 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb14      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.070      0.057     -0.183      0.040      1.006   1777.928 
+  cwb                                 0.827      0.049      0.734      0.926      1.004   1994.541 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.505      0.073      1.363      1.651      1.003   2435.366 
+  Tau 3                               3.067      0.156      2.769      3.383      1.006    904.798 
+  Tau 4                               3.450      0.192      3.092      3.841      1.007    813.954 
+
+Standardized Coefficients:      
+  cwb                                 0.717      0.019      0.677      0.751      1.004   2207.702 
+
+Proportion Variance Explained   
+  by Coefficients                     0.514      0.027      0.459      0.565      1.004   2206.667 
+  by Residual Variation               0.486      0.027      0.435      0.541      1.004   2206.667 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb15      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.041      0.058     -0.154      0.072      1.007   1669.625 
+  cwb                                 0.829      0.049      0.737      0.927      1.004   2051.579 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.391      0.068      1.265      1.530      1.002   2234.609 
+  Tau 3                               2.579      0.116      2.357      2.812      1.005   1151.239 
+  Tau 4                               2.982      0.143      2.708      3.272      1.006   1091.809 
+
+Standardized Coefficients:      
+  cwb                                 0.718      0.018      0.680      0.752      1.003   2425.745 
+
+Proportion Variance Explained   
+  by Coefficients                     0.515      0.026      0.462      0.565      1.003   2417.964 
+  by Residual Variation               0.485      0.026      0.435      0.538      1.003   2417.964 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb16      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.001      0.056     -0.110      0.109      1.006   1627.442 
+  cwb                                 0.807      0.048      0.717      0.905      1.006   1778.269 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.420      0.069      1.291      1.561      1.006   2324.675 
+  Tau 3                               2.823      0.128      2.582      3.086      1.010   1195.142 
+  Tau 4                               3.309      0.168      3.005      3.663      1.013   1015.853 
+
+Standardized Coefficients:      
+  cwb                                 0.708      0.019      0.670      0.744      1.005   2266.144 
+
+Proportion Variance Explained   
+  by Coefficients                     0.502      0.027      0.449      0.553      1.005   2256.457 
+  by Residual Variation               0.498      0.027      0.447      0.551      1.005   2256.457 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb17      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.082      0.054     -0.188      0.022      1.005   1932.991 
+  cwb                                 0.742      0.045      0.655      0.834      1.004   2170.181 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.360      0.066      1.236      1.493      1.004   2643.107 
+  Tau 3                               2.860      0.140      2.603      3.146      1.011    964.787 
+  Tau 4                               3.175      0.165      2.872      3.518      1.012    907.890 
+
+Standardized Coefficients:      
+  cwb                                 0.678      0.020      0.636      0.716      1.004   2786.529 
+
+Proportion Variance Explained   
+  by Coefficients                     0.460      0.027      0.404      0.512      1.004   2779.357 
+  by Residual Variation               0.540      0.027      0.488      0.596      1.004   2779.357 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb18      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.054      0.056     -0.165      0.054      1.008   1575.288 
+  cwb                                 0.818      0.048      0.727      0.915      1.003   2054.015 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.461      0.071      1.325      1.599      1.005   1969.497 
+  Tau 3                               2.670      0.122      2.436      2.909      1.009    924.297 
+  Tau 4                               3.010      0.142      2.740      3.294      1.009    953.699 
+
+Standardized Coefficients:      
+  cwb                                 0.713      0.019      0.674      0.747      1.002   2575.318 
+
+Proportion Variance Explained   
+  by Coefficients                     0.509      0.027      0.454      0.558      1.002   2568.096 
+  by Residual Variation               0.491      0.027      0.442      0.546      1.002   2568.096 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb19      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.092      0.056     -0.203      0.019      1.003   1765.735 
+  cwb                                 0.811      0.048      0.721      0.908      1.002   2068.087 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.374      0.068      1.246      1.514      1.003   2476.300 
+  Tau 3                               2.841      0.134      2.587      3.119      1.003   1150.490 
+  Tau 4                               3.301      0.178      2.976      3.678      1.004   1000.286 
+
+Standardized Coefficients:      
+  cwb                                 0.710      0.019      0.671      0.745      1.002   2486.051 
+
+Proportion Variance Explained   
+  by Coefficients                     0.504      0.026      0.451      0.555      1.002   2480.669 
+  by Residual Variation               0.496      0.026      0.445      0.549      1.002   2480.669 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb20      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.026      0.058     -0.140      0.089      1.007   1684.891 
+  cwb                                 0.887      0.051      0.788      0.987      1.005   1726.378 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.559      0.077      1.413      1.715      1.006   1950.833 
+  Tau 3                               2.889      0.133      2.639      3.159      1.009   1032.109 
+  Tau 4                               3.292      0.158      3.000      3.613      1.007    993.387 
+
+Standardized Coefficients:      
+  cwb                                 0.741      0.017      0.704      0.772      1.005   1857.596 
+
+Proportion Variance Explained   
+  by Coefficients                     0.549      0.026      0.496      0.596      1.005   1852.895 
+  by Residual Variation               0.451      0.026      0.404      0.504      1.005   1852.895 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb21      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.006      0.055     -0.114      0.101      1.005   1874.444 
+  cwb                                 0.784      0.046      0.695      0.876      1.005   1941.823 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.479      0.071      1.344      1.620      1.005   2323.215 
+  Tau 3                               2.891      0.133      2.641      3.161      1.007   1103.857 
+  Tau 4                               3.455      0.183      3.122      3.830      1.008    952.691 
+
+Standardized Coefficients:      
+  cwb                                 0.698      0.019      0.657      0.733      1.004   2263.578 
+
+Proportion Variance Explained   
+  by Coefficients                     0.487      0.027      0.432      0.538      1.004   2262.541 
+  by Residual Variation               0.513      0.027      0.462      0.568      1.004   2262.541 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb22      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.061      0.057     -0.174      0.050      1.008   1804.322 
+  cwb                                 0.836      0.049      0.743      0.936      1.004   1652.473 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.502      0.073      1.366      1.650      1.004   2174.230 
+  Tau 3                               2.943      0.142      2.681      3.248      1.012    931.739 
+  Tau 4                               3.333      0.172      3.020      3.692      1.013    858.903 
+
+Standardized Coefficients:      
+  cwb                                 0.721      0.018      0.683      0.755      1.003   2103.371 
+
+Proportion Variance Explained   
+  by Coefficients                     0.520      0.027      0.466      0.570      1.003   2097.432 
+  by Residual Variation               0.480      0.027      0.430      0.534      1.003   2097.432 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  cwb23      
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  Residual Var.                       1.000      0.000      1.000      1.000        nan        nan 
+
+Coefficients:                   
+  Intercept                          -0.007      0.057     -0.118      0.104      1.005   1741.386 
+  cwb                                 0.828      0.049      0.734      0.928      1.003   1920.425 
+
+Thresholds:                     
+  Tau 1                               0.000      0.000      0.000      0.000        nan        nan 
+  Tau 2                               1.503      0.072      1.362      1.649      1.004   2414.337 
+  Tau 3                               3.034      0.141      2.774      3.325      1.012   1138.687 
+  Tau 4                               3.566      0.186      3.230      3.959      1.014   1032.811 
+
+Standardized Coefficients:      
+  cwb                                 0.717      0.019      0.679      0.752      1.003   2482.104 
+
+Proportion Variance Explained   
+  by Coefficients                     0.514      0.027      0.461      0.565      1.003   2475.178 
+  by Residual Variation               0.486      0.027      0.435      0.539      1.003   2475.178 
+
+                                -------------------------------------------------------------------
+
+
+
+Additional Parameters:
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+
+  l_con                               1.202      0.068      1.071      1.340      1.011   1006.280 
+  l_org                               0.987      0.056      0.882      1.100      1.005   1500.550 
+  l_cwb                               0.776      0.047      0.688      0.871      1.005   1984.815 
+
+                                -------------------------------------------------------------------
+
+
+

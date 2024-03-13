@@ -1,0 +1,76 @@
+#---------------------------------------------------#
+# A General Approach to Modeling Latent Variable
+#  Interactions and Nonlinear Effects
+#
+# Supplemental Material
+#
+# Model 2 - Latent by Latent Interaction Model
+#
+# Copyright Brian T. Keller 2024 all rights reserved
+#---------------------------------------------------#
+
+# Data set's file name
+DATA: data_cat.txt;
+
+# Variable names in text data set
+VARIABLES:
+    consci1:consci10 emosta1:emosta10
+    orgcon1:orgcon10 cwb1:cwb23
+    bin_org cat_org;
+
+## Specify that the items are ordinal.
+ORDINAL:
+    consci1:consci10 orgcon1:orgcon10
+    cwb1:cwb23;
+
+## Define latent variables
+LATENT: consci orgcon cwb;
+
+## Begin Modeling Syntax
+MODEL:
+    ## Latent Moderation Model
+    cwb_model:
+        # Explicitly write out the product between
+	    # the two latent variables
+        cwb ~ consci orgcon consci*orgcon;
+
+        # Fix residual variance to 1 for identification
+		cwb ~~ cwb@1;
+
+    ## Correlating predictor latent variables
+    predictor_model:
+        consci ~~ orgcon;
+        consci ~~ consci@1;
+        orgcon ~~ orgcon@1;
+
+    ## Measurement Models for conscientiousness items
+    measurement_consci:
+    	consci -> consci1@l_con consci2:consci10;
+
+    ## Measurement Models for org constraints items
+    measurement_org:
+    	orgcon -> orgcon1@l_org orgcon2:orgcon10;
+
+    ## Measurement Models for CWB items
+    measurement_cwb:
+    	cwb -> cwb1@l_cwb cwb2:cwb23;
+
+# Specify first loading as always positive
+PARAMETERS:
+	l_con ~ truncate(0, Inf);
+	l_org ~ truncate(0, Inf);
+	l_cwb ~ truncate(0, Inf);
+
+## Conditional Effects Analysis with +/- 1 SD of orgcon
+# mean = 0 by definition
+# SD   = 1 by definition
+SIMPLE:
+    consci | orgcon @ -1.0;
+    consci | orgcon @  0.0;
+    consci | orgcon @  1.0;
+
+# Algorithmic Options
+SEED: 298722;   # PRNG Seed
+CHAINS: 10;     # Number of chains
+BURN: 20000;    # Burn-in iterations
+ITER: 50000;    # Post burn-in iterations

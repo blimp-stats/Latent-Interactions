@@ -1,0 +1,83 @@
+#---------------------------------------------------#
+# A General Approach to Modeling Latent Variable
+#  Interactions and Nonlinear Effects
+#
+# Supplemental Material
+#
+# Model 3 - Three-way Latent Interaction Model
+#
+# Copyright Brian T. Keller 2024 all rights reserved
+#---------------------------------------------------#
+
+# Data set's file name
+DATA: data_cat.txt;
+
+# Variable names in text data set
+VARIABLES:
+    consci1:consci10 emosta1:emosta10
+    orgcon1:orgcon10 cwb1:cwb23
+    bin_org cat_org;
+
+## Specify that the items are ordinal.
+ORDINAL:
+    consci1:consci10 orgcon1:orgcon10
+    emosta1:emosta10 cwb1:cwb23;
+
+## Define latent variables
+LATENT: consci emosta orgcon cwb;
+
+## Begin Modeling Syntax
+MODEL:
+    ## Threeway Latent Moderation Model
+    cwb_model:
+	    # Explicitly write out the product between
+	    # the three latent variables
+	    cwb ~ consci@b1 orgcon@b2 emosta@b3 
+	          consci*orgcon@b4 consci*emosta@b5 orgcon*emosta@b6
+	          consci*orgcon*emosta@b7;
+	
+	    # Fix residual variance to 1 for identification
+	    cwb ~~ cwb@1;
+	    
+    ## Correlating predictor latent variables
+    predictor_model:
+        consci orgcon emosta ~~ consci orgcon emosta;
+
+        consci ~~ consci@1;
+        orgcon ~~ orgcon@1;
+        emosta ~~ emosta@1;
+
+    ## Measurement Models for conscientiousness items
+    measurement_consci:
+    	consci -> consci1@l_con consci2:consci10;
+
+    ## Measurement Models for org constraints items
+    measurement_org:
+    	orgcon -> orgcon1@l_org orgcon2:orgcon10;
+
+    ## Measurement Models for emotional stability items
+    measurement_emosta:
+        emosta -> emosta1@l_emo emosta2:emosta10;
+
+    ## Measurement Models for CWB items
+    measurement_cwb:
+    	cwb -> cwb1@l_cwb cwb2:cwb23;
+
+# Specify first loading as always positive
+PARAMETERS:
+	l_con ~ truncate(0, Inf);
+	l_org ~ truncate(0, Inf);
+	l_emo ~ truncate(0, Inf);
+	l_cwb ~ truncate(0, Inf);
+
+# Obtain two-way conditional effects
+PARAMETERS:
+	inter.emo_m1 = b4 + b7 * (-1);
+	inter.emo_0  = b4 + b7 * ( 0);
+	inter.emo_p1 = b4 + b7 * (+1);
+
+# Algorithmic Options
+SEED: 548973;   # PRNG Seed
+CHAINS: 10;     # Number of chains
+BURN: 20000;    # Burn-in iterations
+ITER: 50000;    # Post burn-in iterations

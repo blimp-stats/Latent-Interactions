@@ -1,0 +1,76 @@
+#---------------------------------------------------#
+# A General Approach to Modeling Latent Variable
+#  Interactions and Nonlinear Effects
+#
+# Supplemental Material
+#
+# Model 5 - Latent with Multi Cateogrical Moderator
+#
+# Copyright Brian T. Keller 2024 all rights reserved
+#---------------------------------------------------#
+
+
+# Data set's file name
+DATA: data_cat.txt;
+
+# Variable names in text data set
+VARIABLES:
+    consci1:consci10 emosta1:emosta10
+    orgcon1:orgcon10 cwb1:cwb23
+    bin_org cat_org;
+
+## Specify that the items are ordinal.
+ORDINAL:
+    consci1:consci10 orgcon1:orgcon10
+    cwb1:cwb23;
+
+## Specify nominal orgcon
+#  To recode reference group: cat_org(2);
+NOMINAL: cat_org;
+
+## Define latent variables
+LATENT: consci cwb;
+
+## Begin Modeling Syntax
+MODEL:
+    ## Latent Moderation Model
+    cwb_model:
+        # Explicitly write out the product between
+	    # the two latent variables
+        cwb ~ consci cat_org consci*cat_org;
+        
+        ## Explicitly Specifying Dummy Codes 
+    	# cwb ~ consci cat_org.2 cat_org.3 
+	    #       consci*cat_org.2 consci*cat_org.3;
+
+        # Fix residual variance to 1 for identification
+		cwb ~~ cwb@1;
+
+    ## Correlating predictor latent variables
+    predictor_model:
+	    cat_org ~ 1;
+        consci ~ cat_org;
+        consci ~~ consci@1;
+
+    ## Measurement Models for conscientiousness items
+    measurement_consci:
+    	consci -> consci1@l_con consci2:consci10;
+
+    ## Measurement Models for CWB items
+    measurement_cwb:
+    	cwb -> cwb1@l_cwb cwb2:cwb23;
+
+# Specify first loading as always positive
+PARAMETERS:
+	l_con ~ truncate(0, Inf);
+	l_cwb ~ truncate(0, Inf);
+
+## Conditional Effects Analysis with cat_org
+SIMPLE:
+    consci | cat_org;
+ 
+# Algorithmic Options
+SEED: 431789;    # PRNG Seed
+CHAINS: 10;      # Number of chains
+BURN: 100000;    # Burn-in iterations
+ITER: 100000;    # Post burn-in iterations
