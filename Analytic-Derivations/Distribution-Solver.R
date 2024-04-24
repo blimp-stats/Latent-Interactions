@@ -24,7 +24,7 @@ compute_dist <- function(y, a, b, mu_x, var_y, var_x) {
     var_x <- substitute(var_x)
     
     # Check if they exist and obtain values, otherwise use name
-       y <- tryCatch(eval(y), error = \(.) y)
+    y <- tryCatch(eval(y), error = \(.) y)
     a <- tryCatch(eval(a), error = \(.) a)
     b <- tryCatch(eval(b), error = \(.) b)
     mu_x <- tryCatch(eval(mu_x), error = \(.) mu_x)
