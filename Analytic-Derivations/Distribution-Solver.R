@@ -24,12 +24,12 @@ compute_dist <- function(y, a, b, mu_x, var_y, var_x) {
     var_x <- substitute(var_x)
     
     # Check if they exist and obtain values, otherwise use name
-    y <- tryCatch(eval(y), error = \(.) y)
-    a <- tryCatch(eval(a), error = \(.) a)
-    b <- tryCatch(eval(b), error = \(.) b)
-    mu_x <- tryCatch(eval(mu_x), error = \(.) mu_x)
-    var_y <- tryCatch(eval(var_y), error = \(.) var_y)
-    var_x <- tryCatch(eval(var_x), error = \(.) var_x)
+    y <- tryCatch(eval(y), error = \(.) paste('(',y,')'))
+    a <- tryCatch(eval(a), error = \(.) paste('(',a,')'))
+    b <- tryCatch(eval(b), error = \(.) paste('(',b,')'))
+    mu_x <- tryCatch(eval(mu_x), error = \(.) paste('(',mu_x,')'))
+    var_y <- tryCatch(eval(var_y), error = \(.) paste('(',var_y,')'))
+    var_x <- tryCatch(eval(var_x), error = \(.) paste('(',var_x,')'))
     
     # Equation (A3)
     list(
@@ -98,17 +98,21 @@ dist <- compute_dist(
 lapply(dist, str2lang)
 
 # $mean
-# ((s2_e2 * (s2_e1 * psi2)/(psi2 * l_1 * l_1 + s2_e1))/((s2_e1 * 
-#     psi2)/(psi2 * l_1 * l_1 + s2_e1) * l_2 * l_2 + s2_e2) * l_3 * 
-#     (Y_3 - nu_3) + s2_e3 * ((s2_e1 * psi2)/(psi2 * l_1 * l_1 + 
-#     s2_e1) * l_2 * (Y_2 - nu_2) + s2_e2 * (psi2 * l_1 * (Y_1 - 
-#     nu_1) + s2_e1 * alpha)/(psi2 * l_1 * l_1 + s2_e1))/((s2_e1 * 
-#     psi2)/(psi2 * l_1 * l_1 + s2_e1) * l_2 * l_2 + s2_e2))/((s2_e2 * 
-#     (s2_e1 * psi2)/(psi2 * l_1 * l_1 + s2_e1))/((s2_e1 * psi2)/(psi2 * 
-#     l_1 * l_1 + s2_e1) * l_2 * l_2 + s2_e2) * l_3 * l_3 + s2_e3)
+# (((s2_e2) * ((s2_e1) * (psi2))/((psi2) * (l_1) * (l_1) + (s2_e1)))/(((s2_e1) * 
+#     (psi2))/((psi2) * (l_1) * (l_1) + (s2_e1)) * (l_2) * (l_2) + 
+#     (s2_e2)) * (l_3) * ((Y_3) - (nu_3)) + (s2_e3) * (((s2_e1) * 
+#     (psi2))/((psi2) * (l_1) * (l_1) + (s2_e1)) * (l_2) * ((Y_2) - 
+#     (nu_2)) + (s2_e2) * ((psi2) * (l_1) * ((Y_1) - (nu_1)) + 
+#     (s2_e1) * (alpha))/((psi2) * (l_1) * (l_1) + (s2_e1)))/(((s2_e1) * 
+#     (psi2))/((psi2) * (l_1) * (l_1) + (s2_e1)) * (l_2) * (l_2) + 
+#     (s2_e2)))/(((s2_e2) * ((s2_e1) * (psi2))/((psi2) * (l_1) * 
+#     (l_1) + (s2_e1)))/(((s2_e1) * (psi2))/((psi2) * (l_1) * (l_1) + 
+#     (s2_e1)) * (l_2) * (l_2) + (s2_e2)) * (l_3) * (l_3) + (s2_e3))
 # 
 # $variance
-# (s2_e3 * (s2_e2 * (s2_e1 * psi2)/(psi2 * l_1 * l_1 + s2_e1))/((s2_e1 * 
-#     psi2)/(psi2 * l_1 * l_1 + s2_e1) * l_2 * l_2 + s2_e2))/((s2_e2 * 
-#     (s2_e1 * psi2)/(psi2 * l_1 * l_1 + s2_e1))/((s2_e1 * psi2)/(psi2 * 
-#     l_1 * l_1 + s2_e1) * l_2 * l_2 + s2_e2) * l_3 * l_3 + s2_e3)
+# ((s2_e3) * ((s2_e2) * ((s2_e1) * (psi2))/((psi2) * (l_1) * (l_1) + 
+#     (s2_e1)))/(((s2_e1) * (psi2))/((psi2) * (l_1) * (l_1) + (s2_e1)) * 
+#     (l_2) * (l_2) + (s2_e2)))/(((s2_e2) * ((s2_e1) * (psi2))/((psi2) * 
+#     (l_1) * (l_1) + (s2_e1)))/(((s2_e1) * (psi2))/((psi2) * (l_1) * 
+#     (l_1) + (s2_e1)) * (l_2) * (l_2) + (s2_e2)) * (l_3) * (l_3) + 
+#     (s2_e3))
