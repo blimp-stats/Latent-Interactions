@@ -1,12 +1,12 @@
 #-------------------------------------------------------------------#
-# A General Approach to Modeling Latent Variable Interactions
-#  and Nonlinear Effects
+# A Factored Regression Approach to Modeling Latent Variable
+#  Interactions and Nonlinear Effects
 #
 # Algorithmically Derived Conditional Distributions
 #
 # Distribution-Solver.R
 #
-# Copyright Brian T. Keller 2024 all rights reserved
+# Copyright Brian T. Keller 2025 all rights reserved
 #-------------------------------------------------------------------#
 
 
