@@ -2,7 +2,7 @@
 ---------------------------------------------------------------------------
 
                                    Blimp
-                                  3.2.12
+                                  3.2.19
 
              Blimp was developed with funding from Institute of
            Education Sciences awards R305D150056 and R305D190002.
@@ -119,52 +119,54 @@ METROPOLIS-HASTINGS ACCEPTANCE RATES:
 DATA INFORMATION:
 
   Sample Size:              1000
-  Missing Data Rates:
-
-                  consci1 = 00.00
-                  consci2 = 00.00
-                  consci3 = 00.00
-                  consci4 = 00.00
-                  consci5 = 00.00
-                  consci6 = 00.00
-                  consci7 = 00.00
-                  consci8 = 00.00
-                  consci9 = 00.00
-                 consci10 = 00.00
-                  orgcon1 = 00.00
-                  orgcon2 = 00.00
-                  orgcon3 = 00.00
-                  orgcon4 = 00.00
-                  orgcon5 = 00.00
-                  orgcon6 = 00.00
-                  orgcon7 = 00.00
-                  orgcon8 = 00.00
-                  orgcon9 = 00.00
-                 orgcon10 = 00.00
-                     cwb1 = 00.00
-                     cwb2 = 00.00
-                     cwb3 = 00.00
-                     cwb4 = 00.00
-                     cwb5 = 00.00
-                     cwb6 = 00.00
-                     cwb7 = 00.00
-                     cwb8 = 00.00
-                     cwb9 = 00.00
-                    cwb10 = 00.00
-                    cwb11 = 00.00
-                    cwb12 = 00.00
-                    cwb13 = 00.00
-                    cwb14 = 00.00
-                    cwb15 = 00.00
-                    cwb16 = 00.00
-                    cwb17 = 00.00
-                    cwb18 = 00.00
-                    cwb19 = 00.00
-                    cwb20 = 00.00
-                    cwb21 = 00.00
-                    cwb22 = 00.00
-                    cwb23 = 00.00
-
+  Missing Data Info:
+                          miss %       1
+                                 --------
+                  consci1 =  0.0       -  
+                  consci2 =  0.0       -  
+                  consci3 =  0.0       -  
+                  consci4 =  0.0       -  
+                  consci5 =  0.0       -  
+                  consci6 =  0.0       -  
+                  consci7 =  0.0       -  
+                  consci8 =  0.0       -  
+                  consci9 =  0.0       -  
+                 consci10 =  0.0       -  
+                  orgcon1 =  0.0       -  
+                  orgcon2 =  0.0       -  
+                  orgcon3 =  0.0       -  
+                  orgcon4 =  0.0       -  
+                  orgcon5 =  0.0       -  
+                  orgcon6 =  0.0       -  
+                  orgcon7 =  0.0       -  
+                  orgcon8 =  0.0       -  
+                  orgcon9 =  0.0       -  
+                 orgcon10 =  0.0       -  
+                     cwb1 =  0.0       -  
+                     cwb2 =  0.0       -  
+                     cwb3 =  0.0       -  
+                     cwb4 =  0.0       -  
+                     cwb5 =  0.0       -  
+                     cwb6 =  0.0       -  
+                     cwb7 =  0.0       -  
+                     cwb8 =  0.0       -  
+                     cwb9 =  0.0       -  
+                    cwb10 =  0.0       -  
+                    cwb11 =  0.0       -  
+                    cwb12 =  0.0       -  
+                    cwb13 =  0.0       -  
+                    cwb14 =  0.0       -  
+                    cwb15 =  0.0       -  
+                    cwb16 =  0.0       -  
+                    cwb17 =  0.0       -  
+                    cwb18 =  0.0       -  
+                    cwb19 =  0.0       -  
+                    cwb20 =  0.0       -  
+                    cwb21 =  0.0       -  
+                    cwb22 =  0.0       -  
+                    cwb23 =  0.0       -  
+                                 --------
+                                 % 100.0
 
 
 MODEL INFORMATION:
@@ -262,10 +264,6 @@ MODEL FIT:
 
   INFORMATION CRITERIA
 
-    Marginal Likelihood
-      DIC2                  139946.016
-      WAIC                  150240.147
-
     Conditional Likelihood
       DIC2                  139946.016
       WAIC                  150240.147
@@ -274,9 +272,10 @@ MODEL FIT:
 CORRELATIONS AMONG RESIDUALS:
 
   Summaries based on 50000 iterations using 10 chains.
+  NOTE: Estimate column based on posterior median.
 
 
-Correlations                         Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Correlations                       Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 
   cwb, consci                        -0.000      0.046     -0.089      0.088      0.000      0.996  49430.157 
@@ -1321,15 +1320,16 @@ Correlations                         Median     StdDev       2.5%      97.5%    
 OUTCOME MODEL ESTIMATES:
 
   Summaries based on 50000 iterations using 10 chains.
+  NOTE: Estimate column based on posterior median.
 
   cwb_model block:
 
 Latent Variable:   cwb        
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
-  Residual Var.                   @   1.000       ---        ---        ---        ---        ---        ---  
+  Residual Var.                     @ 1.000        ---        ---        ---        ---        ---        --- 
 
 Coefficients:                   
   consci                             -0.300      0.040     -0.379     -0.223     56.747      0.000   7066.439 
@@ -1349,7 +1349,7 @@ Proportion Variance Explained
 
 
 
-Conditional Effects                  Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Conditional Effects                Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
   consci | orgcon @ -1                                                                                        
     Intercept                        -0.632      0.045     -0.721     -0.546    201.028      0.000   4219.977 
@@ -1373,10 +1373,10 @@ Conditional Effects                  Median     StdDev       2.5%      97.5%    
 
 Latent Variable:   consci     
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
-  Residual Var.                   @   1.000       ---        ---        ---        ---        ---        ---  
+  Residual Var.                     @ 1.000        ---        ---        ---        ---        ---        --- 
 
 Proportion Variance Explained   
   by Coefficients                     0.000      0.000      0.000      0.000        ---        ---        nan 
@@ -1388,10 +1388,10 @@ Proportion Variance Explained
 
 Latent Variable:   orgcon     
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
-  Residual Var.                   @   1.000       ---        ---        ---        ---        ---        ---  
+  Residual Var.                     @ 1.000        ---        ---        ---        ---        ---        --- 
 
 Proportion Variance Explained   
   by Coefficients                     0.000      0.000      0.000      0.000        ---        ---        nan 
@@ -1403,7 +1403,7 @@ Proportion Variance Explained
 
 Covariance Matrix: consci orgcon
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Covariances:                    
   Cov(consci,orgcon)                 -0.150      0.035     -0.218     -0.080     18.306      0.000  19705.140 
@@ -1418,7 +1418,7 @@ Correlations:
 
 Outcome Variable:  consci1    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1446,7 +1446,7 @@ Proportion Variance Explained
 
 Outcome Variable:  consci2    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1474,7 +1474,7 @@ Proportion Variance Explained
 
 Outcome Variable:  consci3    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1502,7 +1502,7 @@ Proportion Variance Explained
 
 Outcome Variable:  consci4    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1530,7 +1530,7 @@ Proportion Variance Explained
 
 Outcome Variable:  consci5    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1558,7 +1558,7 @@ Proportion Variance Explained
 
 Outcome Variable:  consci6    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1586,7 +1586,7 @@ Proportion Variance Explained
 
 Outcome Variable:  consci7    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1614,7 +1614,7 @@ Proportion Variance Explained
 
 Outcome Variable:  consci8    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1642,7 +1642,7 @@ Proportion Variance Explained
 
 Outcome Variable:  consci9    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1670,7 +1670,7 @@ Proportion Variance Explained
 
 Outcome Variable:  consci10   
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1699,7 +1699,7 @@ Proportion Variance Explained
 
 Outcome Variable:  orgcon1    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1727,7 +1727,7 @@ Proportion Variance Explained
 
 Outcome Variable:  orgcon2    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1755,7 +1755,7 @@ Proportion Variance Explained
 
 Outcome Variable:  orgcon3    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1783,7 +1783,7 @@ Proportion Variance Explained
 
 Outcome Variable:  orgcon4    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1811,7 +1811,7 @@ Proportion Variance Explained
 
 Outcome Variable:  orgcon5    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1839,7 +1839,7 @@ Proportion Variance Explained
 
 Outcome Variable:  orgcon6    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1867,7 +1867,7 @@ Proportion Variance Explained
 
 Outcome Variable:  orgcon7    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1895,7 +1895,7 @@ Proportion Variance Explained
 
 Outcome Variable:  orgcon8    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1923,7 +1923,7 @@ Proportion Variance Explained
 
 Outcome Variable:  orgcon9    
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1951,7 +1951,7 @@ Proportion Variance Explained
 
 Outcome Variable:  orgcon10   
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -1980,7 +1980,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb1       
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2008,7 +2008,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb2       
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2036,7 +2036,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb3       
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2064,7 +2064,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb4       
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2092,7 +2092,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb5       
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2120,7 +2120,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb6       
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2148,7 +2148,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb7       
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2176,7 +2176,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb8       
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2204,7 +2204,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb9       
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2232,7 +2232,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb10      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2260,7 +2260,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb11      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2288,7 +2288,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb12      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2316,7 +2316,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb13      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2344,7 +2344,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb14      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2372,7 +2372,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb15      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2400,7 +2400,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb16      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2428,7 +2428,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb17      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2456,7 +2456,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb18      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2484,7 +2484,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb19      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2512,7 +2512,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb20      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2540,7 +2540,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb21      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2568,7 +2568,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb22      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2596,7 +2596,7 @@ Proportion Variance Explained
 
 Outcome Variable:  cwb23      
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 Variances:                      
   Residual Var.                       1.000      0.000      1.000      1.000        ---        ---        nan 
@@ -2624,7 +2624,7 @@ Proportion Variance Explained
 
 Additional Parameters:
 
-Parameters                           Median     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
+Parameters                         Estimate     StdDev       2.5%      97.5%      ChiSq     PValue      N_Eff 
                                 ------------------------------------------------------------------------------
 
   l_con                               1.202      0.068      1.071      1.340    309.201      0.000   1006.280 
